@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UAE Freezone Compliance — Visa, License, Customs | UAE Filing</title>
+  <meta name="description" content="UAE Filing provides visa renewal, trade license renewal, PRO services, customs clearance, and VAT filing for freezone traders, logistics operators, and e-commerce businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #fff;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ─── Tokens ─────────────────────────────────── */
+    :root {
+      --gold:      #C8922A;
+      --gold-lt:   #bd873e;
+      --gold-bg:   #fbf7f1;
+      --gold-bdr:  #efe7dc;
+      --navy:      #071638;
+      --navy-soft: #1e3a5f;
+      --text:      #0f172a;
+      --muted:     #64748b;
+      --border:    #e2e8f0;
+      --bg-soft:   #f8fafc;
+      --white:     #ffffff;
+      --radius-sm: 10px;
+      --radius:    14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+      --shadow:    0 4px 16px rgba(0,0,0,.08);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,.10);
+    }
+
+    /* ─── Layout ─────────────────────────────────── */
+    .wrap      { max-width: 430px; margin: 0 auto; padding: 0 18px; }
+    .section   { padding: 56px 0; }
+    .section-alt { background: var(--bg-soft); }
+
+    /* ─── Typography helpers ─────────────────────── */
+    .kicker {
+      font-size: 11px; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+    }
+    .section-h { font-size: 22px; font-weight: 700; color: var(--navy); line-height: 1.25; margin-bottom: 10px; }
+    .section-p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
+
+    /* ─── Buttons ────────────────────────────────── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--white);
+      font-size: 14px; font-weight: 700;
+      padding: 13px 24px; border-radius: 100px;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:active { transform: scale(.97); }
+    .btn-gold-outline {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--gold-bg); color: var(--navy);
+      border: 1.5px solid var(--gold-bdr);
+      font-size: 13px; font-weight: 600;
+      padding: 10px 18px; border-radius: 100px;
+      transition: background .2s;
+    }
+
+    /* ═══════════════════════════════════════════════
+       1. NAVBAR — frosted glass, filings.ae style
+    ═══════════════════════════════════════════════ */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15,23,42,.06);
+      box-shadow: 0 1px 0 rgba(15,23,42,.06);
+      height: 58px;
+    }
+    .navbar-inner {
+      max-width: 430px; margin: 0 auto; padding: 0 16px;
+      height: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 6px; }
+    .nav-logo-text { font-size: 17px; font-weight: 800; color: var(--navy); letter-spacing: -.03em; }
+    .nav-logo-text span { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 8px; }
+    .nav-wa {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--gold-bg); border: 1px solid var(--gold-bdr);
+      padding: 7px 12px; border-radius: 100px;
+      font-size: 11px; font-weight: 600; color: var(--navy);
+    }
+    .nav-wa-icon {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: linear-gradient(135deg,#C9A25A,#B48442);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .nav-wa-icon svg { width: 10px; height: 10px; fill: #fff; }
+    .nav-hamburger {
+      width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+      border-radius: 8px; color: var(--navy);
+    }
+    .navbar-spacer { height: 58px; }
+
+    /* ═══════════════════════════════════════════════
+       2. HERO — full-width, text-first mobile layout
+    ═══════════════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(160deg, #f0f4ff 0%, #fff 60%);
+      padding: 40px 18px 36px;
+      max-width: 430px; margin: 0 auto;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute;
+      top: -60px; right: -80px;
+      width: 260px; height: 260px;
+      background: radial-gradient(circle, rgba(200,146,42,.12) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--gold-bg); border: 1px solid var(--gold-bdr);
+      color: var(--gold); font-size: 11px; font-weight: 600;
+      padding: 5px 12px; border-radius: 100px; margin-bottom: 16px;
+      letter-spacing: .03em;
+    }
+    .hero-badge::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); display: block;
+    }
+    .hero-h1 {
+      font-size: 26px; font-weight: 800; color: var(--navy);
+      line-height: 1.2; margin-bottom: 14px; letter-spacing: -.02em;
+    }
+    .hero-h1 span { color: var(--gold); }
+    .hero-p {
+      font-size: 14px; color: var(--muted); line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+
+    /* Service rail — same as filings.ae hero rail */
+    .hero-rail { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .rail-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 13px 16px; background: var(--white);
+      border-bottom: 1px solid var(--border);
+      font-size: 13px; transition: background .15s;
+    }
+    .rail-item:last-child { border-bottom: none; }
+    .rail-item:active { background: var(--bg-soft); }
+    .rail-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .rail-icon svg { width: 16px; height: 16px; }
+    .rail-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--navy); }
+    .rail-text small  { font-size: 11px; color: var(--muted); }
+    .rail-arrow { margin-left: auto; color: var(--muted); flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════════════
+       3. AUDIENCE PILLS — horizontal scroll
+    ═══════════════════════════════════════════════ */
+    .audience-wrap { padding: 20px 0 0; }
+    .audience-scroll {
+      display: flex; gap: 10px; overflow-x: auto; padding: 0 18px 16px;
+      scrollbar-width: none; -webkit-overflow-scrolling: touch;
+    }
+    .audience-scroll::-webkit-scrollbar { display: none; }
+    .aud-pill {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 16px; border-radius: 100px;
+      border: 1.5px solid var(--border); background: var(--white);
+      font-size: 13px; font-weight: 600; color: var(--muted);
+      white-space: nowrap; flex-shrink: 0; transition: all .2s; cursor: pointer;
+    }
+    .aud-pill.active, .aud-pill:hover {
+      border-color: var(--gold); color: var(--navy);
+      background: var(--gold-bg);
+    }
+    .aud-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    /* Audience content panels */
+    .aud-panels { padding: 0 18px 8px; }
+    .aud-panel { display: none; }
+    .aud-panel.active { display: block; }
+    .aud-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .aud-card-header { padding: 20px 20px 14px; border-bottom: 1px solid var(--border); }
+    .aud-card-title { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .aud-card-desc  { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .aud-services { padding: 0; list-style: none; }
+    .aud-service {
+      display: flex; align-items: center; gap: 12px;
+      padding: 13px 20px; border-bottom: 1px solid var(--border);
+      font-size: 13px; font-weight: 500; color: var(--navy);
+    }
+    .aud-service:last-child { border-bottom: none; }
+    .aud-check {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(200,146,42,.1); border: 1.5px solid rgba(200,146,42,.4);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .aud-check svg { width: 10px; height: 10px; }
+
+    /* ═══════════════════════════════════════════════
+       4. TRUST BAR — stat row
+    ═══════════════════════════════════════════════ */
+    .trust-bar { background: var(--navy); padding: 28px 18px; }
+    .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 12px; margin-bottom: 18px; }
+    .trust-item { text-align: center; }
+    .trust-num   { font-size: 28px; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+    .trust-label { font-size: 11px; color: rgba(255,255,255,.6); font-weight: 500; line-height: 1.4; }
+    .trust-note  { text-align: center; font-size: 11px; color: rgba(255,255,255,.35); padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08); }
+
+    /* ═══════════════════════════════════════════════
+       5. SERVICES SECTION
+    ═══════════════════════════════════════════════ */
+    .services-grid { display: flex; flex-direction: column; gap: 12px; }
+    .svc-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px 18px;
+      display: flex; gap: 14px; align-items: flex-start;
+      transition: box-shadow .2s; -webkit-tap-highlight-color: transparent;
+    }
+    .svc-card:active { box-shadow: var(--shadow); }
+    .svc-icon {
+      width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .svc-icon svg { width: 20px; height: 20px; }
+    .svc-body {}
+    .svc-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .svc-desc  { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 8px; }
+    .svc-tag   {
+      display: inline-block; font-size: 10px; font-weight: 600;
+      padding: 2px 9px; border-radius: 100px;
+      background: rgba(200,146,42,.1); color: var(--gold);
+    }
+    .svc-arrow { margin-left: auto; margin-top: 4px; color: var(--muted); flex-shrink: 0; align-self: center; }
+
+    /* ═══════════════════════════════════════════════
+       6. HOW IT WORKS — vertical steps (mobile)
+    ═══════════════════════════════════════════════ */
+    .steps { display: flex; flex-direction: column; gap: 0; }
+    .step-row {
+      display: flex; gap: 14px; padding-bottom: 28px; position: relative;
+    }
+    .step-left { display: flex; flex-direction: column; align-items: center; }
+    .step-num {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--navy); color: var(--gold);
+      font-size: 16px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .step-line { flex: 1; width: 2px; background: var(--border); margin-top: 8px; }
+    .step-row:last-child .step-line { display: none; }
+    .step-body { padding-top: 8px; }
+    .step-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .step-desc  { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+    .step-times { display: flex; flex-direction: column; gap: 8px; margin-top: 24px; }
+    .step-time  {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 12px 16px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .step-time-label { font-size: 12px; color: var(--muted); }
+    .step-time-val   { font-size: 13px; font-weight: 700; color: var(--navy); }
+
+    /* ═══════════════════════════════════════════════
+       7. FREEZONE COVERAGE — stacked panels
+    ═══════════════════════════════════════════════ */
+    .coverage-panels { display: flex; flex-direction: column; gap: 16px; }
+    .cov-panel { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .cov-header {
+      padding: 14px 16px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border); cursor: pointer;
+    }
+    .cov-header-title { font-size: 13px; font-weight: 700; color: var(--navy); }
+    .cov-badge {
+      font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 100px;
+      background: rgba(200,146,42,.1); color: var(--gold);
+    }
+    .cov-list { list-style: none; }
+    .cov-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 11px 16px; border-bottom: 1px solid var(--border);
+      font-size: 13px; color: var(--navy); font-weight: 500;
+    }
+    .cov-item:last-child { border-bottom: none; }
+    .cov-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════════════
+       8. WHY UAE FILING
+    ═══════════════════════════════════════════════ */
+    .diff-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+    .diff-item {
+      display: flex; gap: 12px; padding: 16px; background: var(--white);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+    }
+    .diff-bar { width: 3px; border-radius: 2px; background: var(--gold); flex-shrink: 0; }
+    .diff-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .diff-desc  { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    .quote-list { display: flex; flex-direction: column; gap: 12px; }
+    .quote-card {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 16px 18px;
+    }
+    .quote-mark { font-size: 32px; color: var(--gold); line-height: .9; font-family: Georgia, serif; margin-bottom: 6px; }
+    .quote-text { font-size: 13px; color: #445; line-height: 1.7; font-style: italic; margin-bottom: 8px; }
+    .quote-by   { font-size: 11px; font-weight: 600; color: var(--navy); }
+
+    /* ═══════════════════════════════════════════════
+       9. FAQ — accordion
+    ═══════════════════════════════════════════════ */
+    .faq-group-label {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--gold);
+      margin: 24px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border);
+    }
+    .faq-group-label:first-child { margin-top: 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 8px; overflow: hidden; background: var(--white); }
+    .faq-btn {
+      width: 100%; text-align: left; padding: 15px 16px;
+      font-size: 13px; font-weight: 600; color: var(--navy);
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      background: none; border: none; cursor: pointer;
+    }
+    .faq-icon-btn {
+      width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(200,146,42,.1); color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; transition: transform .3s; line-height: 1;
+    }
+    .faq-item.open .faq-icon-btn { transform: rotate(45deg); }
+    .faq-ans { display: none; padding: 0 16px 14px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .faq-item.open .faq-ans { display: block; }
+
+    /* ═══════════════════════════════════════════════
+       10. LEAD FORM — full bleed navy
+    ═══════════════════════════════════════════════ */
+    .form-section { background: var(--navy); padding: 48px 18px; }
+    .form-headline { font-size: 22px; font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 8px; }
+    .form-headline em { color: var(--gold); font-style: normal; }
+    .form-sub { font-size: 13px; color: rgba(255,255,255,.65); line-height: 1.7; margin-bottom: 28px; }
+
+    .form-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 24px 20px; }
+    .form-group { margin-bottom: 12px; }
+    .form-label { display: block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 5px; }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; padding: 12px 14px;
+      background: rgba(255,255,255,.07); border: 1.5px solid rgba(255,255,255,.12);
+      border-radius: 10px; font-size: 14px; font-family: 'Inter', sans-serif;
+      color: var(--white); outline: none; transition: border .2s;
+      -webkit-appearance: none;
+    }
+    .form-input::placeholder { color: rgba(255,255,255,.3); }
+    .form-input:focus, .form-select:focus { border-color: var(--gold); }
+    .form-select option { background: var(--navy); color: var(--white); }
+    .form-textarea { min-height: 72px; resize: vertical; }
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .form-submit {
+      width: 100%; padding: 14px; background: var(--gold); color: var(--white);
+      font-weight: 700; font-size: 15px; border: none; border-radius: 100px;
+      margin-top: 6px; transition: background .2s;
+    }
+    .form-submit:active { background: var(--gold-lt); }
+    .form-trust { display: flex; align-items: center; gap: 6px; font-size: 11px; color: rgba(255,255,255,.4); margin-top: 12px; justify-content: center; }
+
+    .contact-meta { margin-bottom: 28px; display: flex; flex-direction: column; gap: 10px; }
+    .contact-row { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,.65); }
+    .contact-row strong { color: var(--white); }
+
+    /* ═══════════════════════════════════════════════
+       SITE FOOTER
+    ═══════════════════════════════════════════════ */
+    .site-footer { background: #060d1a; padding: 36px 18px 20px; }
+    .footer-logo { font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 6px; }
+    .footer-logo span { color: var(--gold); }
+    .footer-tagline { font-size: 12px; color: rgba(255,255,255,.4); margin-bottom: 24px; line-height: 1.6; }
+    .footer-links-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 12px; margin-bottom: 28px; }
+    .footer-col-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.35); margin-bottom: 10px; }
+    .footer-link-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-link { font-size: 13px; color: rgba(255,255,255,.55); }
+    .footer-divider { height: 1px; background: rgba(255,255,255,.07); margin-bottom: 16px; }
+    .footer-bottom { font-size: 11px; color: rgba(255,255,255,.25); text-align: center; line-height: 1.7; }
+
+    /* ─── Utility: reveal animation ─────────────── */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .45s ease, transform .45s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     1. NAVBAR
+════════════════════════════════════════════════ -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-text">UAE<span>Filing</span></span>
+    </a>
+    <div class="nav-right">
+      <a href="tel:+97158645098" class="nav-wa" aria-label="Call UAE Filing">
+        <span class="nav-wa-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </span>
+        +971-586 450 918
+      </a>
+      <button class="nav-hamburger" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="navbar-spacer"></div>
+
+<!-- ════════════════════════════════════════════════
+     2. HERO
+════════════════════════════════════════════════ -->
+<section>
+  <div class="hero reveal">
+    <div class="hero-badge">Trusted by 5,000+ UAE Businesses</div>
+    <h1 class="hero-h1">Keep Your UAE Business Running.<br><span>Leave the Compliance to Us.</span></h1>
+    <p class="hero-p">Visa renewals, trade license renewals, PRO services, customs clearance, and VAT filing — for freezone traders, logistics operators, and e-commerce businesses.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">
+        Get Free Consultation
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Service Rail -->
+    <div class="hero-rail">
+      <a href="#contact" class="rail-item">
+        <span class="rail-icon" style="background:#eef2ff;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="12" cy="15" r="2"/></svg>
+        </span>
+        <span class="rail-text">
+          <strong>Visa Renewal</strong>
+          <small>Employee, investor &amp; dependent visas</small>
+        </span>
+        <span class="rail-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+      <a href="#contact" class="rail-item">
+        <span class="rail-icon" style="background:#f5f3ff;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </span>
+        <span class="rail-text">
+          <strong>Trade License Renewal</strong>
+          <small>JAFZA, DMCC, RAKEZ &amp; 15+ freezones</small>
+        </span>
+        <span class="rail-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+      <a href="#contact" class="rail-item">
+        <span class="rail-icon" style="background:#ecfdf5;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </span>
+        <span class="rail-text">
+          <strong>Customs Clearance</strong>
+          <small>Jebel Ali, Abu Dhabi, Sharjah ports</small>
+        </span>
+        <span class="rail-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+      <a href="#contact" class="rail-item">
+        <span class="rail-icon" style="background:#fffbeb;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
+        <span class="rail-text">
+          <strong>VAT Filing &amp; FTA Compliance</strong>
+          <small>Quarterly returns &amp; penalty resolution</small>
+        </span>
+        <span class="rail-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+      <a href="#contact" class="rail-item">
+        <span class="rail-icon" style="background:#fef2f2;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </span>
+        <span class="rail-text">
+          <strong>PRO &amp; Document Clearance</strong>
+          <small>AMER, Tasheel, attestation &amp; MOHRE</small>
+        </span>
+        <span class="rail-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     3. AUDIENCE SELECTOR
+════════════════════════════════════════════════ -->
+<section class="section-alt audience-wrap reveal">
+  <div class="wrap" style="padding-bottom:8px;">
+    <p class="kicker">Who We Serve</p>
+    <h2 class="section-h">Find your business type</h2>
+  </div>
+  <div class="audience-scroll" role="tablist">
+    <button class="aud-pill active" data-aud="traders" role="tab">
+      <span class="aud-dot" style="background:#6366f1;"></span>
+      Freezone Traders
+    </button>
+    <button class="aud-pill" data-aud="logistics" role="tab">
+      <span class="aud-dot" style="background:#10b981;"></span>
+      Logistics Operators
+    </button>
+    <button class="aud-pill" data-aud="ecomm" role="tab">
+      <span class="aud-dot" style="background:#f59e0b;"></span>
+      E-Commerce
+    </button>
+  </div>
+  <div class="aud-panels">
+
+    <!-- Traders -->
+    <div class="aud-panel active" id="aud-traders">
+      <div class="aud-card">
+        <div class="aud-card-header">
+          <div class="aud-card-title">Your Freezone. Our Expertise.</div>
+          <div class="aud-card-desc">From JAFZA to DMCC, we manage your freezone compliance lifecycle so you focus on trade.</div>
+        </div>
+        <ul class="aud-services">
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Trade License Renewal</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Investor and Employee Visa Processing</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>PRO and Document Clearance</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>License Activity Amendment</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Corporate Bank Account Assistance</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Logistics -->
+    <div class="aud-panel" id="aud-logistics">
+      <div class="aud-card">
+        <div class="aud-card-header">
+          <div class="aud-card-title">Port Access. Customs Cleared.</div>
+          <div class="aud-card-desc">Keep cargo moving at Jebel Ali, Abu Dhabi, and Sharjah with zero documentation delays.</div>
+        </div>
+        <ul class="aud-services">
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Customs Clearance — All UAE Ports</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Import and Export Permits</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Bonded Warehouse Documentation</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Employee Visa and Labour Compliance</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>DP World Compliance Documentation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- E-Commerce -->
+    <div class="aud-panel" id="aud-ecomm">
+      <div class="aud-card">
+        <div class="aud-card-header">
+          <div class="aud-card-title">Sell Globally. Stay Compliant.</div>
+          <div class="aud-card-desc">VAT, customs, and visa compliance for UAE-based e-commerce and fulfilment operations.</div>
+        </div>
+        <ul class="aud-services">
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>VAT Registration and Quarterly Filing</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>FTA Compliance and Penalty Resolution</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Import Permit and Customs Clearance</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Employee and Partner Visa Processing</li>
+          <li class="aud-service"><span class="aud-check"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#C8922A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Trade License Renewal and Amendment</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     4. TRUST BAR
+════════════════════════════════════════════════ -->
+<div class="trust-bar reveal">
+  <div style="max-width:430px;margin:0 auto;">
+    <div class="trust-grid">
+      <div class="trust-item"><div class="trust-num">5,000+</div><div class="trust-label">Businesses Served</div></div>
+      <div class="trust-item"><div class="trust-num">15+</div><div class="trust-label">UAE Freezones Covered</div></div>
+      <div class="trust-item"><div class="trust-num">10+</div><div class="trust-label">Years Experience</div></div>
+      <div class="trust-item"><div class="trust-num">98%</div><div class="trust-label">Client Renewal Rate</div></div>
+    </div>
+    <p class="trust-note">UAE Filing is operated by Corebridge Corporate Solutions, Dubai, UAE.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     5. SERVICES
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="services">
+  <div class="wrap">
+    <p class="kicker">Our Services</p>
+    <h2 class="section-h">Everything your UAE business needs in one place</h2>
+    <p class="section-p">Ongoing compliance services that keep your freezone business legally active and operationally uninterrupted.</p>
+    <div class="services-grid">
+
+      <div class="svc-card">
+        <span class="svc-icon" style="background:#eef2ff;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="12" cy="15" r="2"/></svg>
+        </span>
+        <div class="svc-body">
+          <div class="svc-title">Visa Renewal and Processing</div>
+          <div class="svc-desc">Employee, investor, partner, and dependent visa renewals handled end to end including medical typing and MOHRE registration.</div>
+          <span class="svc-tag">All Audiences</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-icon" style="background:#f5f3ff;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </span>
+        <div class="svc-body">
+          <div class="svc-title">Trade License Renewal</div>
+          <div class="svc-desc">Annual freezone and mainland license renewal. We manage submission, payment, and government liaison. No missed deadlines.</div>
+          <span class="svc-tag">Traders / E-Commerce</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-icon" style="background:#ecfdf5;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </span>
+        <div class="svc-body">
+          <div class="svc-title">Customs Clearance</div>
+          <div class="svc-desc">Full customs clearance at Jebel Ali, Abu Dhabi, and Sharjah ports. Import and export permits and DP World compliance.</div>
+          <span class="svc-tag">Logistics / E-Commerce</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-icon" style="background:#fffbeb;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span>
+        <div class="svc-body">
+          <div class="svc-title">VAT Filing and FTA Compliance</div>
+          <div class="svc-desc">Quarterly VAT returns, FTA registration, penalty resolution, and corporate tax compliance for freezone entities.</div>
+          <span class="svc-tag">Traders / E-Commerce</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-icon" style="background:#fef2f2;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <div class="svc-body">
+          <div class="svc-title">PRO and Document Clearance</div>
+          <div class="svc-desc">Government document processing, attestation, AMER and Tasheel typing. Your on-the-ground PRO in Dubai.</div>
+          <span class="svc-tag">All Audiences</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-icon" style="background:#ecfeff;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </span>
+        <div class="svc-body">
+          <div class="svc-title">Corporate Bank Account</div>
+          <div class="svc-desc">Assistance with UAE corporate bank account opening for freezone companies. Documentation and bank liaison included.</div>
+          <span class="svc-tag">All Audiences</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     6. HOW IT WORKS
+════════════════════════════════════════════════ -->
+<section class="section section-alt reveal" id="how">
+  <div class="wrap">
+    <p class="kicker">The Process</p>
+    <h2 class="section-h">Three steps to stay compliant</h2>
+    <p class="section-p">No queues. No government portals. We handle it all from our Dubai office.</p>
+    <div class="steps">
+      <div class="step-row">
+        <div class="step-left">
+          <div class="step-num">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Submit Your Enquiry</div>
+          <div class="step-desc">Fill in the form with your company details and the service you need. Our team reviews within one business day.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-left">
+          <div class="step-num">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">Speak with a Specialist</div>
+          <div class="step-desc">A dedicated UAE Filing advisor contacts you to confirm requirements and provide a transparent fixed quote. No hidden fees.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-left">
+          <div class="step-num">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-body">
+          <div class="step-title">We Handle Everything</div>
+          <div class="step-desc">All government submissions, document processing, and follow-up managed by our team. Status updates at every stage.</div>
+        </div>
+      </div>
+    </div>
+    <div class="step-times">
+      <div class="step-time"><span class="step-time-label">Visa renewals</span><span class="step-time-val">3 to 5 working days</span></div>
+      <div class="step-time"><span class="step-time-label">License renewals</span><span class="step-time-val">5 to 7 working days</span></div>
+      <div class="step-time"><span class="step-time-label">Customs clearance</span><span class="step-time-val">48 hours average</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     7. FREEZONE COVERAGE
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="coverage">
+  <div class="wrap">
+    <p class="kicker">Coverage</p>
+    <h2 class="section-h">UAE Freezones and Ports We Work With</h2>
+    <p class="section-p">We know the exact requirements for your zone and port. Wherever you are registered.</p>
+    <div class="coverage-panels">
+
+      <div class="cov-panel">
+        <div class="cov-header">
+          <span class="cov-header-title">Freezone Licences</span>
+          <span class="cov-badge">15+ Zones</span>
+        </div>
+        <ul class="cov-list">
+          <li class="cov-item"><span class="cov-dot"></span>JAFZA — Jebel Ali Freezone Authority</li>
+          <li class="cov-item"><span class="cov-dot"></span>DMCC — Dubai Multi Commodities Centre</li>
+          <li class="cov-item"><span class="cov-dot"></span>RAKEZ — Ras Al Khaimah Economic Zone</li>
+          <li class="cov-item"><span class="cov-dot"></span>SHAMS — Sharjah Media City</li>
+          <li class="cov-item"><span class="cov-dot"></span>IFZA — International Freezone Authority</li>
+          <li class="cov-item"><span class="cov-dot"></span>DAFZA — Dubai Airport Freezone</li>
+          <li class="cov-item"><span class="cov-dot"></span>Hamriyah Freezone</li>
+          <li class="cov-item"><span class="cov-dot"></span>Ajman Freezone</li>
+          <li class="cov-item"><span class="cov-dot"></span>ADGM — Abu Dhabi Global Market</li>
+          <li class="cov-item"><span class="cov-dot"></span>All other UAE Freezones</li>
+        </ul>
+      </div>
+
+      <div class="cov-panel">
+        <div class="cov-header">
+          <span class="cov-header-title">Ports and Customs Zones</span>
+          <span class="cov-badge">7 Ports</span>
+        </div>
+        <ul class="cov-list">
+          <li class="cov-item"><span class="cov-dot"></span>Jebel Ali Port — DP World</li>
+          <li class="cov-item"><span class="cov-dot"></span>Abu Dhabi Port — Khalifa Port</li>
+          <li class="cov-item"><span class="cov-dot"></span>Sharjah Port — Khorfakkan</li>
+          <li class="cov-item"><span class="cov-dot"></span>Port Rashid, Dubai</li>
+          <li class="cov-item"><span class="cov-dot"></span>Hamriyah Port</li>
+          <li class="cov-item"><span class="cov-dot"></span>Dubai International Airport — Air Freight</li>
+          <li class="cov-item"><span class="cov-dot"></span>Abu Dhabi Airport — Air Freight</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     8. WHY UAE FILING
+════════════════════════════════════════════════ -->
+<section class="section section-alt reveal" id="why">
+  <div class="wrap">
+    <p class="kicker">Why UAE Filing</p>
+    <h2 class="section-h">Why Businesses Choose Us</h2>
+    <p class="section-p">Corebridge Corporate Solutions. Over a decade of UAE regulatory compliance. Your on-the-ground partner in Dubai.</p>
+
+    <div class="diff-list">
+      <div class="diff-item">
+        <div class="diff-bar"></div>
+        <div>
+          <div class="diff-title">One Point of Contact</div>
+          <div class="diff-desc">A dedicated advisor manages all your requirements. No call centres. No queues.</div>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-bar"></div>
+        <div>
+          <div class="diff-title">Transparent Pricing</div>
+          <div class="diff-desc">Fixed quote before any work begins. No hidden government fees. No surprise charges.</div>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-bar"></div>
+        <div>
+          <div class="diff-title">Government Liaison Included</div>
+          <div class="diff-desc">We handle all interaction with UAE government portals and freezones. You do not need to visit the UAE.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-list">
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">Our JAFZA license and three employee visas were renewed without us visiting the UAE once. UAE Filing handled everything remotely.</div>
+        <div class="quote-by">Logistics Company, United Kingdom</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">We received an FTA penalty on a late VAT return. UAE Filing resolved the filing and secured a waiver within two weeks.</div>
+        <div class="quote-by">E-Commerce Trader, India</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">Our Jebel Ali customs clearance now takes 48 hours consistently. UAE Filing handles our import permits end to end.</div>
+        <div class="quote-by">Import and Export Trader, Oman</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     9. FAQ
+════════════════════════════════════════════════ -->
+<section class="section reveal" id="faq">
+  <div class="wrap">
+    <p class="kicker">FAQ</p>
+    <h2 class="section-h">Frequently asked questions</h2>
+    <p class="section-p" style="margin-bottom:28px;">Common questions from traders, logistics operators, and e-commerce businesses.</p>
+
+    <p class="faq-group-label">General</p>
+
+    <div class="faq-item">
+      <button class="faq-btn">Do I need to be in the UAE to renew my license or visa?<span class="faq-icon-btn">+</span></button>
+      <div class="faq-ans">No. UAE Filing manages the full renewal process remotely from our Dubai office. We require your documents and authorisation only.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn">How long does a visa renewal take?<span class="faq-icon-btn">+</span></button>
+      <div class="faq-ans">Standard visa renewals take 3 to 5 working days once documents are received. You receive status updates throughout.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn">Can you handle any UAE Freezone?<span class="faq-icon-btn">+</span></button>
+      <div class="faq-ans">Yes. We work across all UAE Freezones including JAFZA, DMCC, RAKEZ, SHAMS, IFZA, DAFZA, Hamriyah, Ajman, and more.</div>
+    </div>
+
+    <p class="faq-group-label">Logistics Operators</p>
+
+    <div class="faq-item">
+      <button class="faq-btn">Do you clear customs at all UAE ports?<span class="faq-icon-btn">+</span></button>
+      <div class="faq-ans">Yes. We cover Jebel Ali, Abu Dhabi (Khalifa Port), Sharjah (Khorfakkan), and UAE air ports. We process import permits, bonded warehouse documentation, and duty calculations.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn">Can you clear cargo without us being present?<span class="faq-icon-btn">+</span></button>
+      <div class="faq-ans">Yes. We act as your authorised customs agent. All procedures are managed by our team and you receive copies of all documentation.</div>
+    </div>
+
+    <p class="faq-group-label">E-Commerce</p>
+
+    <div class="faq-item">
+      <button class="faq-btn">We received an FTA penalty. Can you help?<span class="faq-icon-btn">+</span></button>
+      <div class="faq-ans">Yes. We can file outstanding VAT returns and submit a formal penalty reconsideration request to the FTA. Our team has resolved many such cases.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn">Do you support GCC and international shipping?<span class="faq-icon-btn">+</span></button>
+      <div class="faq-ans">Yes. We support UAE-based e-commerce companies using the UAE as a re-export hub, covering VAT, customs, import permits, and license renewals.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     10. LEAD FORM
+════════════════════════════════════════════════ -->
+<section class="form-section reveal" id="contact">
+  <div style="max-width:430px;margin:0 auto;">
+    <p class="kicker" style="color:rgba(201,160,42,.9);">Get In Touch</p>
+    <h2 class="form-headline">Ready to Keep Your UAE Business <em>Compliant?</em></h2>
+    <p class="form-sub">A UAE Filing compliance specialist will contact you within one business day. Serving the UK, India, Oman, Turkey, and GCC.</p>
+
+    <div class="contact-meta">
+      <div class="contact-row">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span><strong>info@uaefiling.com</strong></span>
+      </div>
+      <div class="contact-row">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Dubai, United Arab Emirates</span>
+      </div>
+      <div class="contact-row">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 2H8l-4 5h16l-4-5z"/></svg>
+        <span>Operated by Corebridge Corporate Solutions</span>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form id="main-form">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="m-name">Full Name *</label>
+            <input class="form-input" type="text" id="m-name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="m-company">Company *</label>
+            <input class="form-input" type="text" id="m-company" placeholder="Company name" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="m-email">Email Address *</label>
+          <input class="form-input" type="email" id="m-email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="m-phone">Phone Number *</label>
+          <input class="form-input" type="tel" id="m-phone" placeholder="+44 7700 900 000" required />
+        </div>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="m-country">Country</label>
+            <select class="form-select" id="m-country">
+              <option value="">Select</option>
+              <option>United Kingdom</option>
+              <option>India</option>
+              <option>Oman</option>
+              <option>Turkey</option>
+              <option>UAE</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="m-freezone">Freezone / Port</label>
+            <input class="form-input" type="text" id="m-freezone" placeholder="e.g. JAFZA" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="m-service">Service Required</label>
+          <select class="form-select" id="m-service">
+            <option value="">Select service</option>
+            <option>Visa Renewal</option>
+            <option>Trade License Renewal</option>
+            <option>PRO and Document Clearance</option>
+            <option>Customs Clearance</option>
+            <option>VAT Filing and FTA Compliance</option>
+            <option>Corporate Bank Account</option>
+            <option>Multiple Services</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="m-msg">Message (optional)</label>
+          <textarea class="form-input form-textarea" id="m-msg" placeholder="Tell us about your situation"></textarea>
+        </div>
+        <button class="form-submit" type="submit">Submit Enquiry</button>
+        <div class="form-trust">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2D7A4F" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Your information is protected and never shared.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div style="max-width:430px;margin:0 auto;">
+    <div class="footer-logo">UAE<span>Filing</span></div>
+    <p class="footer-tagline">Expert UAE Compliance. Wherever You Are.<br>Operated by Corebridge Corporate Solutions, Dubai.</p>
+    <div class="footer-links-row">
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-link-list">
+          <li><a href="#services" class="footer-link">Visa Renewal</a></li>
+          <li><a href="#services" class="footer-link">License Renewal</a></li>
+          <li><a href="#services" class="footer-link">PRO Services</a></li>
+          <li><a href="#services" class="footer-link">Customs Clearance</a></li>
+          <li><a href="#services" class="footer-link">VAT Filing</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-link-list">
+          <li><a href="#how" class="footer-link">How It Works</a></li>
+          <li><a href="#coverage" class="footer-link">Freezones</a></li>
+          <li><a href="#why" class="footer-link">About Us</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      Copyright 2026 UAE Filing. All rights reserved.<br>
+      Operated by Corebridge Corporate Solutions, Dubai, UAE.
+    </div>
+  </div>
+</footer>
+
+<!-- ── JavaScript ──────────────────────────────── -->
+<script>
+  // Audience pills
+  document.querySelectorAll('.aud-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.aud-pill').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.aud-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('aud-' + btn.dataset.aud).classList.add('active');
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Form submit
+  document.getElementById('main-form').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Thank you. A UAE Filing specialist will contact you within one business day.');
+    e.target.reset();
+  });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
