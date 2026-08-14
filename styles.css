@@ -37,9 +37,17 @@
     padding: 0;
 }
 
+html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
 html {
     height: 100%;
-    overflow-x: hidden !important;
     overflow-y: auto !important;
     /* Only ONE scrollbar on html */
     scroll-behavior: smooth;
@@ -48,7 +56,6 @@ html {
 
 body {
     min-height: 100%;
-    margin: 0;
     overflow: visible !important;
     /* Body MUST NOT create a second scrollbar */
     font-family: var(--font-main);
@@ -67,7 +74,7 @@ body.mobile-nav-active {
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 /* Force disable overflow scrolling on ALL div wrappers */
@@ -77,6 +84,21 @@ section,
 header,
 nav {
     overflow-y: visible !important;
+}
+
+/* Constrain section wrappers to prevent horizontal scrolling */
+.hero-section,
+.section,
+.container,
+.trust-wrapper,
+.coverage-grid,
+.services-grid,
+.process-grid,
+.why-grid,
+.quotes-grid,
+.faq-grid-layout {
+    max-width: 100% !important;
+    overflow-x: clip !important;
 }
 
 img {
@@ -2216,9 +2238,19 @@ body.mobile-nav-active .hamburger {
     }
 
     .trust-bar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 20px 0 0 0 !important;
+        transform: none !important;
+        box-sizing: border-box !important;
+        padding: 24px 16px !important;
         border-radius: 12px;
-        margin: 2rem 1rem;
-        padding: 2.5rem 1rem;
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
     }
 
     /* Typography */
@@ -2510,8 +2542,19 @@ body.mobile-nav-active .hamburger {
     }
 
     .trust-bar {
-        margin: 2rem 0.5rem;
-        padding: 2rem 0.5rem;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 20px 0 0 0 !important;
+        transform: none !important;
+        box-sizing: border-box !important;
+        padding: 20px 12px !important;
+        border-radius: 12px;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
     }
 
     .stat-number {
