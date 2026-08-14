@@ -536,19 +536,20 @@ body.mobile-nav-active .hamburger {
     background-color: #F8FAFC !important;
 }
 
-.hero {
+.hero, .hero-section {
     min-height: auto !important;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 100px 0 24px 0 !important;
+    padding-top: 24px !important;
     margin-bottom: 0 !important;
     background: linear-gradient(180deg, #F8FAFC 0%, var(--color-white) 100%);
 }
 
-.serve-section,
-#audience-selector {
-    padding-top: 24px !important;
+.hero-badge, .trust-pill, .badge-pill {
+    margin-top: 8px !important;
+    margin-bottom: 16px !important;
 }
 
 .hero-inner {
@@ -604,70 +605,75 @@ body.mobile-nav-active .hamburger {
 }
 
 /* --- Hero Marquee Auto-Scroll Ticker --- */
-.hero-marquee-wrapper {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    margin-top: 0.5rem;
-    padding: 0.5rem 0;
-    mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+/* --- Hero Features Auto-Scroll Ticker --- */
+.hero-features-wrapper {
+    width: 100vw !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    position: relative;
+    margin: 20px auto 0 auto !important;
+    padding: 10px 0 !important;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 
-.hero-marquee-track {
-    display: flex;
-    gap: 1rem;
-    width: max-content;
-    animation: marqueeScroll 28s linear infinite;
+.hero-features-track {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 14px !important;
+    width: max-content !important;
+    animation: scrollTrack 22s linear infinite !important;
     will-change: transform;
 }
 
-.hero-marquee-wrapper:hover .hero-marquee-track {
-    animation-play-state: paused;
+.hero-features-track:hover,
+.hero-features-track:active {
+    animation-play-state: paused !important;
 }
 
-@keyframes marqueeScroll {
+@keyframes scrollTrack {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-50%);
     }
 }
 
-.rail-item {
-    display: flex;
-    flex-direction: column;
-    padding: 12px 20px;
-    background: var(--color-white);
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
-    text-align: left;
-    min-width: 250px;
-    flex-shrink: 0;
+.feature-card {
+    flex: 0 0 175px !important;
+    min-width: 175px !important;
+    padding: 16px 14px !important;
+    border-radius: 14px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column !important;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
-.rail-item:hover {
+.feature-card:hover {
     border-color: var(--color-primary-dark);
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
     transform: translateY(-2px);
 }
 
-.rail-item strong {
+.feature-card h4 {
     color: var(--color-primary-dark);
     font-size: 0.9375rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
     display: block;
+    line-height: 1.3 !important;
 }
 
-.rail-item span {
+.feature-card p {
     font-size: 0.8125rem;
     color: var(--color-text-secondary);
     line-height: 1.4;
+    margin: 0 !important;
 }
 
 /* --- Section: 3. Who We Serve (Refined Text Visibility & Pill Tabs) --- */
@@ -2159,7 +2165,7 @@ body.mobile-nav-active .hamburger {
     }
 
     .hero {
-        padding-top: 100px !important;
+        padding-top: 24px !important;
         padding-bottom: 20px !important;
         min-height: auto !important;
     }
@@ -2264,89 +2270,7 @@ body.mobile-nav-active .hamburger {
         height: 14px !important;
     }
 
-    /* Hero Mini Feature Cards */
-    .hero-marquee-wrapper,
-    .hero-features,
-    .features-grid,
-    .hero-chips-container {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        -webkit-overflow-scrolling: touch !important;
-        scroll-snap-type: x mandatory !important;
-        gap: 12px !important;
-        padding: 12px 16px 16px 16px !important;
-        width: 100vw !important;
-        margin-left: -16px !important; /* Full bleed to screen edges */
-        margin-right: -16px !important;
-        scrollbar-width: none !important; /* Hide scrollbar for clean look */
-        mask-image: none !important;
-        -webkit-mask-image: none !important;
-    }
-
-    .hero-marquee-wrapper::-webkit-scrollbar,
-    .hero-marquee-track::-webkit-scrollbar,
-    .hero-features::-webkit-scrollbar,
-    .features-grid::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    .hero-marquee-track {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        gap: 12px !important;
-        width: max-content !important;
-        animation: none !important;
-    }
-
-    .hero-marquee-track [aria-hidden="true"] {
-        display: none !important;
-    }
-
-    .rail-item,
-    .feature-card,
-    .hero-feature-item {
-        flex: 0 0 180px !important; /* Fixed comfortable card width */
-        min-width: 180px !important;
-        max-width: 200px !important;
-        scroll-snap-align: start !important;
-        padding: 16px 14px !important;
-        border-radius: 14px !important;
-        background: #FFFFFF !important;
-        border: 1px solid #E2E8F0 !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        flex-direction: column !important;
-        text-align: left !important;
-    }
-
-    .rail-item strong,
-    .feature-card h3,
-    .feature-card h4,
-    .feature-card strong,
-    .hero-feature-item strong {
-        font-size: 14px !important;
-        font-weight: 700 !important;
-        line-height: 1.3 !important;
-        word-break: normal !important;
-        hyphens: none !important;
-        margin-bottom: 6px !important;
-        color: var(--color-primary-dark) !important;
-    }
-
-    .rail-item span,
-    .feature-card p,
-    .feature-card span,
-    .hero-feature-item span {
-        font-size: 12px !important;
-        line-height: 1.4 !important;
-        color: #64748B !important;
-        word-break: normal !important;
-        white-space: normal !important;
-    }
+    /* Removed old snap overrides to let auto-scroll carousel run smoothly on mobile */
 
     .nav-cta-btn {
         display: none !important;
