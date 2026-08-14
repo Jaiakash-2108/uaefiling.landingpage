@@ -3369,3 +3369,58 @@ body.mobile-nav-active .hamburger {
         box-sizing: border-box !important;
     }
 }
+
+/* =========================================================
+   ABSOLUTE BOTTOM SPECIFICITY OVERRIDE FOR BUTTONS & PILLS
+   ========================================================= */
+a[href*="#contact"],
+a[href^="tel:"],
+button,
+.btn,
+.cta-btn,
+.hero-cta,
+.nav-cta,
+.nav-cta-btn,
+.btn-flow,
+.btn-primary,
+.serve-cta-btn,
+.btn-submit,
+.faq-header-cta,
+button[type="submit"] {
+    background-color: #0052FF !important;
+    color: #FFFFFF !important;
+    border: none !important;
+}
+
+a[href*="#contact"]:hover,
+a[href^="tel:"]:hover,
+button:hover,
+.btn:hover,
+.cta-btn:hover,
+.hero-cta:hover,
+.nav-cta:hover,
+.nav-cta-btn:hover,
+.btn-flow:hover,
+.btn-primary:hover,
+.serve-cta-btn:hover,
+.btn-submit:hover,
+.faq-header-cta:hover,
+button[type="submit"]:hover {
+    background-color: #3D8BFF !important;
+    color: #FFFFFF !important;
+}
+
+.trust-badge,
+.badge-pill,
+.hero-badge,
+.trust-pill,
+.section-eyebrow,
+.serve-badge,
+.timeline-status-badge,
+.sla-badge,
+.graphic-status-tag,
+.badge {
+    background-color: #EAF1FF !important;
+    color: #0052FF !important;
+    border: 1px solid #EAF1FF !important;
+}
