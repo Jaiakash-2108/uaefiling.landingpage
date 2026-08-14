@@ -282,8 +282,9 @@ button[type="submit"]:hover {
     background-color: #3D8BFF !important; /* Accent Blue Hover */
     color: #FFFFFF !important;
     border: none !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 82, 255, 0.3) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 14px rgba(0, 82, 255, 0.2) !important;
+    transition: all 0.2s ease !important;
 }
 
 /* FORCE LIGHT BLUE TINT ON PILLS & BADGES */
@@ -433,7 +434,10 @@ button[type="submit"]:hover {
 }
 
 .logo-img {
-    height: 40px;
+    height: 44px;
+    max-height: 48px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-contact {
@@ -783,9 +787,9 @@ body.mobile-nav-active .hamburger {
     padding: 0.625rem 1.375rem;
     font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--text-main);
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-subtle);
+    color: #0D0D0D;
+    background-color: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
     border-radius: 9999px;
     cursor: pointer;
     transition: all 0.25s ease-in-out !important;
@@ -794,36 +798,38 @@ body.mobile-nav-active .hamburger {
     min-height: 44px;
 }
 
-.serve-tab-trigger:hover,
-.tab-btn:hover {
-    color: var(--accent-primary);
-    background-color: var(--bg-secondary);
-    border-color: var(--accent-primary);
+.serve-tab-trigger:not(.active):hover,
+.serve-tab-trigger[data-state="inactive"]:hover,
+.tab-btn:not(.active):hover {
+    color: #0052FF !important;
+    background-color: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
 }
 
 .serve-tab-trigger[data-state="active"],
 .serve-tab-trigger.active,
 .tab-btn.active {
-    color: #FFFFFF !important;
-    background-color: var(--accent-primary) !important;
-    border: 1px solid var(--accent-primary) !important;
-    box-shadow: 0 4px 12px rgba(0, 82, 255, 0.2);
+    color: #0052FF !important;
+    background-color: #EAF1FF !important;
+    border: 2px solid #0052FF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(0, 82, 255, 0.12) !important;
 }
 
 .serve-tab-icon {
     transition: color 0.3s ease;
-    color: var(--accent-primary);
+    color: #0052FF;
 }
 
 .serve-tab-trigger:hover .serve-tab-icon,
 .tab-btn:hover .serve-tab-icon {
-    color: var(--accent-primary);
+    color: #0052FF;
 }
 
 .serve-tab-trigger[data-state="active"] .serve-tab-icon,
 .serve-tab-trigger.active .serve-tab-icon,
 .tab-btn.active .serve-tab-icon {
-    color: #FFFFFF !important;
+    color: #0052FF !important;
 }
 
 /* Main Rounded Card Container (.serve-card-box) */
@@ -3370,9 +3376,11 @@ body.mobile-nav-active .hamburger {
     }
 }
 
-/* HARD OVERRIDE UAEFILING BRAND SYSTEM */
-button,
-.btn,
+/* =========================================================
+   HARD OVERRIDE UAEFILING BRAND SYSTEM & POLISH
+   ========================================================= */
+
+/* 1. Primary CTA Buttons */
 .btn-primary,
 .hero-cta,
 .nav-cta,
@@ -3388,9 +3396,12 @@ a[href*="#contact"] {
     background: #0052FF !important;
     color: #FFFFFF !important;
     border: none !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
 }
 
-button:hover,
+/* 1b. CTA Hover Shadow Softened Globally */
+.btn:hover,
 .btn-primary:hover,
 .hero-cta:hover,
 .nav-cta:hover,
@@ -3400,12 +3411,32 @@ button:hover,
 .btn-submit:hover,
 .faq-header-cta:hover,
 button[type="submit"]:hover,
-a.btn:hover {
+a.btn:hover,
+a[href*="#contact"]:hover {
     background-color: #3D8BFF !important;
     background: #3D8BFF !important;
     color: #FFFFFF !important;
+    box-shadow: 0 4px 14px rgba(0, 82, 255, 0.2) !important;
+    transform: translateY(-1px) !important;
+    transition: all 0.2s ease !important;
 }
 
+/* 2. Desktop Navbar Logo Size */
+@media (min-width: 769px) {
+    .navbar .logo img,
+    .navbar .logo-img,
+    .nav-brand img,
+    .brand-logo,
+    header img[alt*="logo"],
+    header img[alt*="UAE"] {
+        height: 44px !important;
+        max-height: 48px !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+/* 3. Badges and Pills */
 .hero-badge,
 .trust-pill,
 .badge-pill,
@@ -3420,4 +3451,48 @@ a.btn:hover {
     color: #0052FF !important;
     border: 1px solid #EAF1FF !important;
     border-color: #EAF1FF !important;
+}
+
+/* 4. Tab Switcher Active & Inactive States ('Who We Serve') */
+.serve-tab-trigger:not(.active),
+.serve-tab-trigger[data-state="inactive"],
+.tab-btn:not(.active) {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #0D0D0D !important;
+    border: 1.5px solid #E2E8F0 !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+}
+
+.serve-tab-trigger:not(.active) .serve-tab-icon,
+.serve-tab-trigger[data-state="inactive"] .serve-tab-icon,
+.tab-btn:not(.active) .serve-tab-icon {
+    color: #0052FF !important;
+}
+
+.serve-tab-trigger:not(.active):hover,
+.serve-tab-trigger[data-state="inactive"]:hover,
+.tab-btn:not(.active):hover {
+    background-color: #F8FAFC !important;
+    background: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
+    color: #0052FF !important;
+}
+
+.serve-tab-trigger.active,
+.serve-tab-trigger[data-state="active"],
+.tab-btn.active {
+    background-color: #EAF1FF !important;
+    background: #EAF1FF !important;
+    color: #0052FF !important;
+    border: 2px solid #0052FF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(0, 82, 255, 0.12) !important;
+}
+
+.serve-tab-trigger.active .serve-tab-icon,
+.serve-tab-trigger[data-state="active"] .serve-tab-icon,
+.tab-btn.active .serve-tab-icon {
+    color: #0052FF !important;
 }
