@@ -42,30 +42,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Audience Selector Tabs (Shadcn Feature108 Component Switch)
-    const serveTriggers = document.querySelectorAll('.serve-tab-trigger');
-    const servePanels = document.querySelectorAll('.serve-card-box .tab-panel');
+    const serveTriggers = document.querySelectorAll('.serve-tab-trigger, .tab-btn');
+    const servePanels = document.querySelectorAll('.serve-card-box .tab-panel, .tab-panel, .tab-pane');
 
     if (serveTriggers.length > 0) {
         serveTriggers.forEach(trigger => {
             trigger.addEventListener('click', () => {
                 const targetId = trigger.getAttribute('data-target');
 
-                // Update data-state & aria-selected on all triggers
+                // Update data-state, aria-selected, and remove active class from all triggers
                 serveTriggers.forEach(t => {
                     t.setAttribute('data-state', 'inactive');
+                    t.classList.remove('active');
                     t.setAttribute('aria-selected', 'false');
                 });
 
                 // Set clicked trigger to active
                 trigger.setAttribute('data-state', 'active');
+                trigger.classList.add('active');
                 trigger.setAttribute('aria-selected', 'true');
 
-                // Hide all panels
+                // Hide all panels by removing active class
                 servePanels.forEach(panel => {
                     panel.classList.remove('active');
                 });
 
-                // Show target panel with active class for smooth opacity/scale transition
+                // Show target panel with active class for smooth opacity and translateY transition
                 const targetPanel = document.getElementById(targetId);
                 if (targetPanel) {
                     targetPanel.classList.add('active');

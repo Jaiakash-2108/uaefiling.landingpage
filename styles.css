@@ -718,7 +718,8 @@ body.mobile-nav-active .hamburger {
     margin-bottom: 2.5rem;
 }
 
-.serve-tab-trigger {
+.serve-tab-trigger,
+.tab-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -730,18 +731,21 @@ body.mobile-nav-active .hamburger {
     border: 1px solid transparent;
     border-radius: 9999px;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.25s ease-in-out !important;
     outline: none;
     user-select: none;
     min-height: 44px;
 }
 
-.serve-tab-trigger:hover {
+.serve-tab-trigger:hover,
+.tab-btn:hover {
     color: #0F172A;
     background-color: rgba(241, 245, 249, 0.7);
 }
 
-.serve-tab-trigger[data-state="active"] {
+.serve-tab-trigger[data-state="active"],
+.serve-tab-trigger.active,
+.tab-btn.active {
     color: #0F172A;
     background-color: #FFFFFF;
     border: 1px solid #E2E8F0;
@@ -753,11 +757,14 @@ body.mobile-nav-active .hamburger {
     color: #64748B;
 }
 
-.serve-tab-trigger:hover .serve-tab-icon {
+.serve-tab-trigger:hover .serve-tab-icon,
+.tab-btn:hover .serve-tab-icon {
     color: #0F172A;
 }
 
-.serve-tab-trigger[data-state="active"] .serve-tab-icon {
+.serve-tab-trigger[data-state="active"] .serve-tab-icon,
+.serve-tab-trigger.active .serve-tab-icon,
+.tab-btn.active .serve-tab-icon {
     color: #0F172A;
 }
 
@@ -771,18 +778,33 @@ body.mobile-nav-active .hamburger {
     overflow: hidden;
 }
 
-.tab-panel {
+.tab-panel,
+.serve-tab-content,
+.tab-pane {
     display: none;
     opacity: 0;
-    transform: translateY(12px) scale(0.99);
-    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.tab-panel.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0) scale(1);
+.tab-panel.active,
+.tab-pane.active,
+.serve-tab-content.active {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    animation: smoothTabFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes smoothTabFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .serve-panel-grid {
