@@ -1515,18 +1515,25 @@ body.mobile-nav-active .hamburger {
     letter-spacing: -0.01em;
 }
 
-.count {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--accent-primary);
-    color: #FFFFFF;
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 700;
+.count,
+.zone-badge,
+.port-badge,
+.freezone-pill,
+.pill-tag,
+.coverage-panel .count,
+.panel-header .count {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #EAF1FF !important; /* Soft Light Blue Tint */
+    color: #0052FF !important; /* Primary Blue Text */
+    border: 1px solid #EAF1FF !important;
+    padding: 4px 12px !important;
+    border-radius: 999px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
     white-space: nowrap !important;
-    box-shadow: 0 2px 6px rgba(0, 82, 255, 0.2);
+    box-shadow: none !important;
 }
 
 .coverage-list {
@@ -2101,15 +2108,28 @@ body.mobile-nav-active .hamburger {
     margin-bottom: var(--spacing-lg);
 }
 
+.footer-brand,
+.footer-col:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+}
+
 .footer-logo {
-    height: 40px;
-    margin-bottom: var(--spacing-sm);
+    height: 36px !important;
+    width: auto !important;
+    margin: 0 0 8px 0 !important;
+    display: block !important;
     filter: brightness(0) invert(1);
 }
 
 .footer-tagline {
-    color: var(--text-navy-sub);
-    max-width: 300px;
+    color: #A9C2FF !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    max-width: 280px !important;
+    margin: 0 !important;
 }
 
 .footer-links {
@@ -2123,15 +2143,36 @@ body.mobile-nav-active .hamburger {
     margin-bottom: 1.5rem;
 }
 
-.link-column a {
-    display: block;
-    color: var(--text-navy-sub);
+.footer a,
+footer a,
+.footer-links a,
+.link-column a,
+.footer-col a {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #A9C2FF !important; /* Subtle light blue text */
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    width: auto !important;
     margin-bottom: 0.75rem;
+    transition: color 0.2s ease, text-decoration 0.2s ease !important;
 }
 
-.link-column a:hover {
-    color: var(--color-white);
-    transform: translateX(4px);
+.footer a:hover,
+footer a:hover,
+.footer-links a:hover,
+.link-column a:hover,
+.footer-col a:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    text-decoration: underline !important;
+    transform: none !important;
 }
 
 .footer-bottom {
@@ -3396,7 +3437,7 @@ body.mobile-nav-active .hamburger {
 .faq-header-cta,
 button[type="submit"],
 a.btn,
-a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-link) {
+a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-link):not(.footer a):not(footer a):not(.link-column a):not(.footer-links a) {
     background-color: #0052FF !important;
     background: #0052FF !important;
     color: #FFFFFF !important;
@@ -3417,7 +3458,7 @@ a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-l
 .faq-header-cta:hover,
 button[type="submit"]:hover,
 a.btn:hover,
-a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-link):hover {
+a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-link):not(.footer a):not(footer a):not(.link-column a):not(.footer-links a):hover {
     background-color: #3D8BFF !important;
     background: #3D8BFF !important;
     color: #FFFFFF !important;
@@ -3568,4 +3609,83 @@ a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-l
     stroke: #0052FF !important;
     color: #0052FF !important;
     fill: none !important;
+}
+
+/* 7. Coverage Section Badges */
+.count,
+.zone-badge,
+.port-badge,
+.freezone-pill,
+.pill-tag,
+.coverage-panel .count,
+.panel-header .count {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #EAF1FF !important; /* Soft Light Blue Tint */
+    color: #0052FF !important; /* Primary Blue Text */
+    border: 1px solid #EAF1FF !important;
+    padding: 4px 12px !important;
+    border-radius: 999px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    box-shadow: none !important;
+}
+
+/* 8. Footer Links & Alignment */
+.footer-brand,
+.footer-col:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+}
+
+.footer-logo {
+    height: 36px !important;
+    width: auto !important;
+    margin: 0 0 8px 0 !important;
+    display: block !important;
+    filter: brightness(0) invert(1) !important;
+}
+
+.footer-tagline {
+    color: #A9C2FF !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    max-width: 280px !important;
+    margin: 0 !important;
+}
+
+.footer a,
+footer a,
+.footer-links a,
+.link-column a,
+.footer-col a {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #A9C2FF !important; /* Subtle light blue text */
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    width: auto !important;
+    margin-bottom: 0.75rem !important;
+    transition: color 0.2s ease, text-decoration 0.2s ease !important;
+}
+
+.footer a:hover,
+footer a:hover,
+.footer-links a:hover,
+.link-column a:hover,
+.footer-col a:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    text-decoration: underline !important;
+    transform: none !important;
 }
