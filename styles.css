@@ -2234,22 +2234,34 @@ body.mobile-nav-active .hamburger {
     }
 
     /* Compact Hero CTA Button */
+    .hero .btn,
     .hero-cta,
     .hero-actions .btn,
     .hero-actions .btn-flow,
     .btn-primary {
-        padding: 12px 24px !important;
-        font-size: 15px !important;
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+        line-height: 1.2 !important;
         font-weight: 600 !important;
-        border-radius: 10px !important;
+        border-radius: 999px !important;
         height: auto !important;
-        min-height: 44px !important;
+        min-height: 40px !important;
         width: 100% !important;
-        max-width: 320px !important;
+        max-width: 260px !important;
         margin: 0 auto 20px auto !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
+        gap: 8px !important;
+    }
+
+    .hero-actions .btn-flow-icon,
+    .hero-actions .btn svg,
+    .hero-actions .btn-flow svg,
+    .hero-actions .btn i {
+        font-size: 14px !important;
+        width: 14px !important;
+        height: 14px !important;
     }
 
     /* Hero Mini Feature Cards */
