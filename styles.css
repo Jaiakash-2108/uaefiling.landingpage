@@ -244,7 +244,66 @@ h3 {
 }
 
 /* --- Components --- */
-/* Buttons */
+/* =========================================================
+   FORCE PRIMARY BLUE ON ALL CTA BUTTONS & LIGHT BLUE PILLS
+   ========================================================= */
+.btn-primary,
+.hero-cta,
+.nav-cta,
+.cta-button,
+a.btn,
+button.btn,
+.header-btn,
+.submit-btn,
+.btn-submit,
+.nav-cta-btn,
+.serve-cta-btn,
+.faq-header-cta,
+.btn-flow,
+button[type="submit"] {
+    background-color: #0052FF !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 6px rgba(0, 82, 255, 0.2) !important;
+}
+
+.btn-primary:hover,
+.hero-cta:hover,
+.nav-cta:hover,
+.cta-button:hover,
+.submit-btn:hover,
+.btn-submit:hover,
+.nav-cta-btn:hover,
+.serve-cta-btn:hover,
+.faq-header-cta:hover,
+.btn-flow:hover,
+button[type="submit"]:hover {
+    background-color: #3D8BFF !important; /* Accent Blue Hover */
+    color: #FFFFFF !important;
+    border: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 82, 255, 0.3) !important;
+}
+
+/* FORCE LIGHT BLUE TINT ON PILLS & BADGES */
+.hero-badge,
+.trust-pill,
+.badge-pill,
+.serve-pill,
+.timeline-pill,
+.badge,
+.section-eyebrow,
+.serve-badge,
+.timeline-status-badge,
+.sla-badge,
+.graphic-status-tag {
+    background-color: #EAF1FF !important;
+    color: #0052FF !important;
+    border: 1px solid #EAF1FF !important;
+}
+
+/* Buttons Base */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -260,20 +319,6 @@ h3 {
     text-decoration: none;
 }
 
-.btn-primary {
-    background-color: var(--accent-primary);
-    color: #FFFFFF;
-    border-color: var(--accent-primary);
-    box-shadow: 0 2px 6px rgba(0, 82, 255, 0.15);
-}
-
-.btn-primary:hover {
-    background-color: var(--accent-hover);
-    border-color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 82, 255, 0.25);
-}
-
 /* --- FlowButton Component --- */
 .btn-flow {
     position: relative;
@@ -284,35 +329,36 @@ h3 {
     padding: 10px 20px;
     font-size: 0.9375rem;
     font-weight: 600;
-    color: #FFFFFF;
-    background-color: var(--accent-primary);
-    border: 1px solid var(--accent-primary);
+    color: #FFFFFF !important;
+    background-color: #0052FF !important;
+    border: none !important;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     text-decoration: none;
     isolation: isolate;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 6px rgba(0, 82, 255, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 82, 255, 0.2);
 }
 
 .btn-flow-text {
     position: relative;
     z-index: 2;
     transition: transform 0.3s ease;
+    color: #FFFFFF !important;
 }
 
 .btn-flow-icon {
     position: relative;
     z-index: 2;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    stroke: #FFFFFF !important;
 }
 
 .btn-flow:hover {
-    background-color: var(--accent-hover);
-    border-color: var(--accent-hover);
+    background-color: #3D8BFF !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 82, 255, 0.25);
+    box-shadow: 0 6px 16px rgba(0, 82, 255, 0.3) !important;
 }
 
 .btn-flow:hover .btn-flow-icon {
@@ -334,9 +380,9 @@ h3 {
 }
 
 .btn-outline {
-    background: transparent;
-    border: 1px solid var(--accent-primary);
-    color: var(--accent-primary);
+    background: transparent !important;
+    border: 1px solid var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
 }
 
 .btn-whatsapp {
