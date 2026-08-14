@@ -2471,11 +2471,135 @@ body.mobile-nav-active .hamburger {
         transform: none !important;
     }
 
+    /* ============================================
+       CONTACT / GET IN TOUCH SECTION MOBILE
+       ============================================ */
+
+    /* Dark outer container */
     .contact-section {
-        padding: 32px 20px !important;
         width: calc(100% - 32px) !important;
-        margin-bottom: 40px !important;
-        border-radius: 16px !important;
+        max-width: 100% !important;
+        margin: 24px auto !important;
+        padding: 32px 16px !important;
+        border-radius: 24px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    /* Top text content (left col on desktop) */
+    .contact-info .section-title {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 12px !important;
+        word-break: normal !important;
+        white-space: normal !important;
+    }
+
+    .contact-info .section-subtitle {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+        word-break: normal !important;
+        white-space: normal !important;
+    }
+
+    /* Contact list rows (email / location / operator) */
+    .contact-meta {
+        gap: 12px !important;
+        margin-top: 16px !important;
+    }
+
+    .meta-item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        font-size: 13.5px !important;
+        margin-bottom: 10px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* White form card */
+    .contact-form-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 24px auto 0 auto !important;
+        padding: 22px 18px !important;
+        border-radius: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Form rows: stack to single column on mobile */
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Form groups: reduce vertical breathing room */
+    .form-group {
+        margin-bottom: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Labels */
+    .form-group label {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        margin-bottom: 5px !important;
+        display: block !important;
+    }
+
+    /* Text inputs & selects */
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group input {
+        height: 42px !important;
+        padding: 8px 12px !important;
+        font-size: 13.5px !important;
+        font-family: inherit !important;
+        border-radius: 10px !important;
+        border: 1px solid #E2E8F0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Textarea */
+    .form-group textarea {
+        height: 80px !important;
+        min-height: 80px !important;
+        max-height: 80px !important;
+        padding: 10px 12px !important;
+        font-size: 13.5px !important;
+        font-family: inherit !important;
+        border-radius: 10px !important;
+        border: 1px solid #E2E8F0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Submit button — kill cursive browser default font */
+    .btn-submit,
+    button[type="submit"] {
+        font-family: inherit !important;
+        font-size: 14.5px !important;
+        font-weight: 700 !important;
+        font-style: normal !important;
+        letter-spacing: 0.2px !important;
+        height: 44px !important;
+        width: 100% !important;
+        border-radius: 10px !important;
+        background: #0F172A !important;
+        color: #FFFFFF !important;
+        margin-top: 8px !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: none !important;
     }
 
     /* Mobile CTA - Hidden on User Request */
