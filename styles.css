@@ -947,10 +947,13 @@ body.mobile-nav-active .hamburger {
     background-color: #0F172A;
     padding: 3rem 2rem;
     color: #FFFFFF;
-    border-radius: 16px;
+    border-radius: 24px;
+    overflow: hidden;
+    width: calc(100% - 32px);
     max-width: 1200px;
-    margin: 3rem auto;
+    margin: 24px auto;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    box-sizing: border-box;
 }
 
 .trust-grid {
@@ -2281,14 +2284,15 @@ body.mobile-nav-active .hamburger {
     }
 
     .trust-bar {
-        width: 100% !important;
+        width: calc(100% - 32px) !important;
         max-width: 100% !important;
         min-width: 0 !important;
-        margin: 20px 0 0 0 !important;
+        margin: 24px auto !important;
         transform: none !important;
         box-sizing: border-box !important;
         padding: 24px 16px !important;
-        border-radius: 12px;
+        border-radius: 24px !important;
+        overflow: hidden !important;
     }
 
     .trust-grid {
