@@ -1176,30 +1176,37 @@ body.mobile-nav-active .hamburger {
     flex-grow: 1;
 }
 
-.service-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--accent-primary);
-    text-decoration: none;
-    margin-top: auto;
-    transition: color 0.25s ease;
+.service-card-link,
+.service-link,
+.service-card a,
+.services-grid a {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #0052FF !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: fit-content !important;
+    margin-top: auto !important;
+    transition: color 0.2s ease, transform 0.2s ease !important;
 }
 
-.service-link:hover {
-    color: var(--accent-hover);
-}
-
-.service-arrow {
-    stroke: var(--accent-primary);
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.service-card:hover .service-arrow,
-.service-link:hover .service-arrow {
-    transform: translateX(4px);
+.service-card-link:hover,
+.service-link:hover,
+.service-card a:hover,
+.services-grid a:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #3D8BFF !important;
+    text-decoration: underline !important;
+    transform: translateX(3px) !important;
+    box-shadow: none !important;
 }
 
 @media (max-width: 1024px) {
@@ -1401,35 +1408,33 @@ body.mobile-nav-active .hamburger {
     min-width: 0 !important;
 }
 
-.timeline-icon {
-    display: inline-flex !important;
+.timeline-card .timeline-icon,
+.timeline-icon-box,
+.timeline-item .icon-wrapper,
+.timeline-icon,
+.timeline-icon.icon-amber,
+.timeline-icon.icon-blue,
+.timeline-icon.icon-dark {
+    background-color: #EAF1FF !important; /* Unified Light Blue Tint */
+    color: #0052FF !important; /* Unified Primary Blue */
+    border: 1px solid #EAF1FF !important;
+    border-radius: 10px !important;
+    display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: 36px !important;
     height: 36px !important;
-    border-radius: 8px !important;
-    border: 1px solid var(--border-subtle);
     flex-shrink: 0 !important;
     font-size: 18px !important;
 }
 
-/* Timeline Icon Color Subthemes */
-.timeline-icon.icon-amber {
-    background-color: #FFFBEB !important;
-    border-color: #FDE68A !important;
-    color: #D97706 !important;
-}
-
-.timeline-icon.icon-blue {
-    background-color: #EFF6FF !important;
-    border-color: #BFDBFE !important;
-    color: #2563EB !important;
-}
-
-.timeline-icon.icon-dark {
-    background-color: var(--bg-secondary) !important;
-    border-color: var(--border-subtle) !important;
-    color: var(--accent-primary) !important;
+.timeline-card .timeline-icon svg,
+.timeline-card .timeline-icon i,
+.timeline-icon svg,
+.timeline-icon i {
+    stroke: #0052FF !important;
+    color: #0052FF !important;
+    fill: none !important;
 }
 
 .timeline-item-title,
@@ -3391,7 +3396,7 @@ body.mobile-nav-active .hamburger {
 .faq-header-cta,
 button[type="submit"],
 a.btn,
-a[href*="#contact"] {
+a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-link) {
     background-color: #0052FF !important;
     background: #0052FF !important;
     color: #FFFFFF !important;
@@ -3412,7 +3417,7 @@ a[href*="#contact"] {
 .faq-header-cta:hover,
 button[type="submit"]:hover,
 a.btn:hover,
-a[href*="#contact"]:hover {
+a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-link):hover {
     background-color: #3D8BFF !important;
     background: #3D8BFF !important;
     color: #FFFFFF !important;
@@ -3495,4 +3500,72 @@ a[href*="#contact"]:hover {
 .serve-tab-trigger[data-state="active"] .serve-tab-icon,
 .tab-btn.active .serve-tab-icon {
     color: #0052FF !important;
+}
+
+/* 5. Explore Service Card Links */
+.service-card-link,
+.service-link,
+.service-card a,
+.services-grid a,
+.service-card a[href*="#contact"],
+.services-grid a[href*="#contact"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #0052FF !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: fit-content !important;
+    margin-top: auto !important;
+    transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+.service-card-link:hover,
+.service-link:hover,
+.service-card a:hover,
+.services-grid a:hover,
+.service-card a[href*="#contact"]:hover,
+.services-grid a[href*="#contact"]:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #3D8BFF !important;
+    text-decoration: underline !important;
+    transform: translateX(3px) !important;
+    box-shadow: none !important;
+}
+
+/* 6. Unified Average Timelines Icons */
+.timeline-card .timeline-icon,
+.timeline-icon-box,
+.timeline-item .icon-wrapper,
+.timeline-icon,
+.timeline-icon.icon-amber,
+.timeline-icon.icon-blue,
+.timeline-icon.icon-dark {
+    background-color: #EAF1FF !important; /* Unified Light Blue Tint */
+    color: #0052FF !important; /* Unified Primary Blue */
+    border: 1px solid #EAF1FF !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    flex-shrink: 0 !important;
+    font-size: 18px !important;
+}
+
+.timeline-card .timeline-icon svg,
+.timeline-card .timeline-icon i,
+.timeline-icon svg,
+.timeline-icon i {
+    stroke: #0052FF !important;
+    color: #0052FF !important;
+    fill: none !important;
 }
