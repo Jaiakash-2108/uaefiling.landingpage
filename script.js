@@ -269,3 +269,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// =========================================================
+// LEAD CAPTURE POPUP MODAL — 15s Auto-Trigger
+// =========================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const modalOverlay = document.getElementById('leadModalOverlay');
+    const closeBtn = document.getElementById('closeLeadModal');
+    const leadForm = document.getElementById('leadModalForm');
+
+    if (!modalOverlay) return;
+
+    const showModal = () => {
+        if (!sessionStorage.getItem('leadModalDismissed')) {
+            modalOverlay.classList.add('active');
+            modalOverlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    const closeModal = () => {
+        modalOverlay.classList.remove('active');
+        modalOverlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        sessionStorage.setItem('leadModalDismissed', 'true');
+    };
+
+    // Auto-trigger after 15 seconds
+    setTimeout(showModal, 15000);
+
+    // Close on X button
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    // Close on overlay backdrop click
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) closeModal();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+    });
+
+    // Handle form submission
+    if (leadForm) {
+        leadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = leadForm.querySelector('.modal-submit-btn');
+            if (submitBtn) {
+                submitBtn.textContent = '✓ Enquiry Sent Successfully!';
+                submitBtn.style.backgroundColor = '#10B981';
+                submitBtn.style.background = '#10B981';
+            }
+            setTimeout(closeModal, 1800);
+        });
+    }
+});
+

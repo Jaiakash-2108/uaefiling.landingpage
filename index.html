@@ -983,6 +983,58 @@
             </div>
         </div>
     </footer>
+    <!-- Lead Capture Modal Overlay -->
+    <div id="leadModalOverlay" class="lead-modal-overlay" aria-hidden="true">
+        <div class="lead-modal-container" role="dialog" aria-modal="true">
+            <button id="closeLeadModal" class="lead-modal-close" aria-label="Close modal">&times;</button>
+
+            <div class="lead-modal-header">
+                <img src="assest/UAE Filing Logo .png" alt="UAE Filing Logo" class="lead-modal-logo">
+                <span class="lead-modal-badge">Fast-Track Compliance</span>
+                <h3>Get Free Compliance Assessment</h3>
+                <p>Speak to our Dubai corporate specialists and get a fixed quote within 24 hours.</p>
+            </div>
+
+            <form id="leadModalForm" class="lead-modal-form">
+                <div class="modal-form-row">
+                    <div class="modal-form-group">
+                        <label for="modalName">Full Name *</label>
+                        <input type="text" id="modalName" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="modalCompany">Company Name *</label>
+                        <input type="text" id="modalCompany" name="company" placeholder="Acme FZE" required>
+                    </div>
+                </div>
+
+                <div class="modal-form-row">
+                    <div class="modal-form-group">
+                        <label for="modalEmail">Email Address *</label>
+                        <input type="email" id="modalEmail" name="email" placeholder="name@company.com" required>
+                    </div>
+                    <div class="modal-form-group">
+                        <label for="modalPhone">Phone / WhatsApp *</label>
+                        <input type="tel" id="modalPhone" name="phone" placeholder="+971 50 000 0000" required>
+                    </div>
+                </div>
+
+                <div class="modal-form-group full-width">
+                    <label for="modalService">Service Required *</label>
+                    <select id="modalService" name="service" required>
+                        <option value="" disabled selected>Select service</option>
+                        <option value="Visa Renewal">Visa Renewal &amp; Processing</option>
+                        <option value="Trade License">Trade License Renewal</option>
+                        <option value="Customs Clearance">Customs Clearance</option>
+                        <option value="VAT & FTA Filing">VAT Filing &amp; FTA Compliance</option>
+                        <option value="PRO Services">PRO &amp; Document Clearance</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="modal-submit-btn">Get Free Assessment &rarr;</button>
+                <p class="modal-privacy">🔒 100% confidential. No spam guaranteed.</p>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
