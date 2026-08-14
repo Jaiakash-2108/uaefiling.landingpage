@@ -451,23 +451,23 @@ button[type="submit"]:hover {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 10px 20px;
-    background-color: var(--accent-primary);
-    color: #FFFFFF;
+    padding: 9px 18px;
+    background-color: var(--accent-primary) !important;
+    color: #FFFFFF !important;
     font-weight: 600;
     font-size: 0.9375rem;
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 6px rgba(0, 82, 255, 0.15);
-    border: 1px solid var(--accent-primary);
+    transition: all 0.2s ease !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .nav-cta-btn:hover {
-    background-color: var(--accent-hover);
-    border-color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 82, 255, 0.25);
+    background-color: var(--accent-hover) !important;
+    border-color: transparent !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(0, 82, 255, 0.12) !important;
 }
 
 .nav-cta-arrow {
@@ -3501,8 +3501,6 @@ a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-l
 .btn:hover,
 .btn-primary:hover,
 .hero-cta:hover,
-.nav-cta:hover,
-.nav-cta-btn:hover,
 .btn-flow:hover,
 .serve-cta-btn:hover,
 .btn-submit:hover,
@@ -3513,9 +3511,28 @@ a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-l
     background-color: #3D8BFF !important;
     background: #3D8BFF !important;
     color: #FFFFFF !important;
-    box-shadow: 0 4px 14px rgba(0, 82, 255, 0.2) !important;
+    box-shadow: 0 4px 14px rgba(0, 82, 255, 0.16) !important;
     transform: translateY(-1px) !important;
     transition: all 0.2s ease !important;
+}
+
+/* 1c. Navbar 'Book Consultation' CTA Specific Subtle Hover */
+.navbar .nav-cta-btn,
+.nav-cta-btn,
+.nav-cta,
+.nav-contact a {
+    box-shadow: none !important;
+}
+
+.navbar .nav-cta-btn:hover,
+.nav-cta-btn:hover,
+.nav-cta:hover,
+.nav-contact a:hover {
+    background-color: #3D8BFF !important;
+    background: #3D8BFF !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(0, 82, 255, 0.12) !important; /* Soft, clean, minimal shadow */
+    transform: translateY(-1px) !important;
 }
 
 /* 2. Desktop Navbar Logo Size */
