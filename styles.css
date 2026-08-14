@@ -2502,14 +2502,15 @@ body.mobile-nav-active .hamburger {
     .serve-text-content,
     .audience-info,
     .tab-left-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important; /* Standard side gutter */
+        box-sizing: border-box !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important; /* Forces strict left alignment */
         text-align: left !important;
-        width: 100% !important;
-        padding: 0 !important;
         margin: 0 0 24px 0 !important;
-        box-sizing: border-box !important;
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
@@ -2519,8 +2520,9 @@ body.mobile-nav-active .hamburger {
     .serve-pill,
     .badge-pill {
         align-self: flex-start !important;
-        font-size: 12px !important;
+        margin-left: 0 !important;
         margin-bottom: 12px !important;
+        font-size: 12px !important;
         padding: 5px 12px !important;
         display: inline-flex !important;
     }
@@ -2529,12 +2531,13 @@ body.mobile-nav-active .hamburger {
     .serve-panel-title,
     .serve-title {
         text-align: left !important;
+        margin-left: 0 !important;
         font-size: 26px !important;
-        font-weight: 800 !important;
         line-height: 1.2 !important;
+        font-weight: 800 !important;
+        width: 100% !important;
         margin-bottom: 12px !important;
         color: #0F172A !important;
-        width: 100% !important;
         word-break: normal !important;
     }
 
@@ -2544,11 +2547,16 @@ body.mobile-nav-active .hamburger {
     .audience-info p,
     .tab-left-col p {
         text-align: left !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
         font-size: 14px !important;
         line-height: 1.5 !important;
         color: #475569 !important;
         margin-bottom: 18px !important;
-        width: 100% !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important; /* Ensures clean text wrapping within screen */
     }
 
     .serve-cta-btn {
@@ -2569,15 +2577,16 @@ body.mobile-nav-active .hamburger {
     .serve-graphic-card,
     .hub-showcase-card,
     .serve-right-col {
-        width: 100% !important;
+        width: calc(100vw - 32px) !important; /* Strictly fits screen with 16px side margins */
         max-width: 100% !important;
-        padding: 20px 16px !important;
+        margin: 16px auto 0 auto !important;
+        padding: 18px 14px !important;
         background: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
         border-radius: 20px !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
         box-sizing: border-box !important;
-        margin: 0 auto !important;
+        overflow: hidden !important; /* Prevents child pills from overflowing */
     }
 
     .graphic-card-header,
@@ -2588,6 +2597,8 @@ body.mobile-nav-active .hamburger {
         align-items: center !important;
         justify-content: space-between !important;
         width: 100% !important;
+        gap: 8px !important;
+        box-sizing: border-box !important;
         margin-bottom: 16px !important;
         padding-bottom: 12px !important;
         border-bottom: 1px solid #F1F5F9 !important;
@@ -2606,8 +2617,10 @@ body.mobile-nav-active .hamburger {
     .graphic-status-tag,
     .graphic-card-header .badge,
     .graphic-card-header .badge-pill {
-        font-size: 12px !important;
+        font-size: 11.5px !important;
+        padding: 4px 10px !important;
         white-space: nowrap !important;
+        flex-shrink: 0 !important;
         margin: 0 !important;
     }
 
