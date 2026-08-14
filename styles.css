@@ -2165,6 +2165,7 @@ body.mobile-nav-active .hamburger {
 
     .section {
         padding: 32px 0 !important;
+        margin-bottom: 40px !important; /* Uniform gap between all sections */
     }
 
     .hero {
@@ -2482,7 +2483,7 @@ body.mobile-nav-active .hamburger {
         width: calc(100% - 32px) !important;
         max-width: 100% !important;
         margin: 24px auto !important;
-        padding: 32px 16px !important;
+        padding: 28px 12px !important; /* 12px sides give form max width */
         border-radius: 24px !important;
         box-sizing: border-box !important;
         overflow: hidden !important;
@@ -2526,8 +2527,8 @@ body.mobile-nav-active .hamburger {
         width: 100% !important;
         max-width: 100% !important;
         margin: 24px auto 0 auto !important;
-        padding: 20px 14px !important;
-        border-radius: 20px !important;
+        padding: 18px 12px !important; /* Reduced to give inputs max width */
+        border-radius: 18px !important;
         box-sizing: border-box !important;
     }
 
@@ -2618,6 +2619,21 @@ body.mobile-nav-active .hamburger {
         border: 1px solid #E2E8F0 !important;
         width: 100% !important;
         box-sizing: border-box !important;
+    }
+
+    /* Privacy disclaimer text under submit button */
+    .trust-text,
+    .form-privacy,
+    .form-disclaimer {
+        text-align: center !important;
+        width: 100% !important;
+        display: block !important;
+        margin: 12px auto 0 auto !important;
+        font-size: 12.5px !important;
+        color: #94A3B8 !important;
+        line-height: 1.4 !important;
+        white-space: normal !important;
+        grid-column: 1 / -1 !important; /* Spans full 2-column grid width */
     }
 
     /* Mobile CTA - Hidden on User Request */
