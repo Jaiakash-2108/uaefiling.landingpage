@@ -705,24 +705,28 @@ body.mobile-nav-active .hamburger {
 .hero-carousel-card,
 .marquee-card,
 .mini-service-card {
-    flex: 0 0 220px !important;
-    min-width: 220px !important;
-    width: 220px !important;
-    padding: 18px 20px !important;
+    flex: 0 0 250px !important;
+    min-width: 250px !important;
+    width: 250px !important;
+    padding: 16px 20px !important;
+    background-color: #FFFFFF !important;
     background: #FFFFFF !important;
     border: 1px solid #E2E8F0 !important;
-    border-radius: 14px !important;
+    border-radius: 12px !important;
     display: flex !important;
     flex-direction: column !important;
-    text-align: left !important;
+    align-items: flex-start !important;
     justify-content: center !important;
+    text-align: left !important;
     box-sizing: border-box !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .feature-card:hover,
-.hero-carousel-card:hover {
+.hero-carousel-card:hover,
+.marquee-card:hover,
+.mini-service-card:hover {
     border-color: #0052FF !important;
     box-shadow: 0 4px 14px rgba(0, 82, 255, 0.1) !important;
     transform: translateY(-2px) !important;
@@ -730,7 +734,9 @@ body.mobile-nav-active .hamburger {
 
 .feature-card h4,
 .hero-carousel-card h4,
-.hero-carousel-card strong {
+.hero-carousel-card strong,
+.mini-service-card h4,
+.feature-card strong {
     font-size: 14px !important;
     font-weight: 700 !important;
     color: #0D0D0D !important;
@@ -741,8 +747,9 @@ body.mobile-nav-active .hamburger {
 
 .feature-card p,
 .hero-carousel-card p,
-.hero-carousel-card span {
-    font-size: 12px !important;
+.hero-carousel-card span,
+.mini-service-card p {
+    font-size: 12.5px !important;
     line-height: 1.4 !important;
     color: #64748B !important;
     margin: 0 !important;
@@ -1785,91 +1792,88 @@ body.mobile-nav-active .hamburger {
     z-index: 2;
 }
 
-.testimonial-avatar-btn,
+.avatar-btn,
 .testimonial-tab-btn,
 .avatar-pill,
-.avatar-btn {
+.testimonial-avatar-btn {
     display: inline-flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    font-size: 13px !important;
-    font-weight: 600 !important;
+    height: 38px !important;
     border-radius: 999px !important;
-    padding: 6px 14px !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    outline: none !important;
-    user-select: none !important;
-    white-space: nowrap !important;
-    min-height: 36px !important;
-    width: auto !important;
-}
-
-/* Inactive Testimonial Buttons */
-.avatar-btn:not(.active),
-.testimonial-avatar-btn:not(.active),
-.testimonial-tab-btn:not(.active) {
+    padding: 0 !important;
     background-color: #F1F5F9 !important;
-    background: #F1F5F9 !important;
-    color: #0052FF !important;
-    border: 1px solid transparent !important;
-    box-shadow: none !important;
+    border: 1.5px solid transparent !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    user-select: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-.avatar-btn:not(.active) .avatar-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px !important;
-    height: 24px !important;
-    border-radius: 50%;
-    background-color: #E2E8F0 !important;
-    color: #0052FF !important;
-    font-size: 11px !important;
-    font-weight: 700 !important;
+/* Inactive / Collapsed State (Circle avatar only) */
+.avatar-btn:not(.active),
+.testimonial-tab-btn:not(.active) {
+    width: 38px !important; /* Circle avatar */
+    background-color: #F1F5F9 !important;
+    border-color: transparent !important;
 }
 
-.avatar-btn:not(.active) .avatar-name {
-    color: #444444 !important;
+.avatar-btn:not(.active) .avatar-name,
+.avatar-btn:not(.active) span:not(.avatar-circle),
+.testimonial-tab-btn:not(.active) .avatar-name,
+.testimonial-tab-btn:not(.active) span:not(.avatar-circle) {
+    opacity: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Hover on Inactive or Active State (Expands to pill) */
+.avatar-btn:hover,
+.avatar-btn.active,
+.testimonial-tab-btn:hover,
+.testimonial-tab-btn.active {
+    width: auto !important;
+    padding-right: 14px !important;
+    background-color: #EAF1FF !important;
+    border-color: #0052FF !important;
+}
+
+.avatar-btn:hover .avatar-name,
+.avatar-btn.active .avatar-name,
+.avatar-btn:hover span:not(.avatar-circle),
+.avatar-btn.active span:not(.avatar-circle),
+.testimonial-tab-btn:hover .avatar-name,
+.testimonial-tab-btn.active .avatar-name {
+    opacity: 1 !important;
+    max-width: 140px !important;
+    padding-left: 8px !important;
+    color: #0052FF !important;
     font-size: 13px !important;
     font-weight: 600 !important;
-    opacity: 1 !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
+    margin: 0 !important;
+    pointer-events: auto !important;
+    transition: all 0.3s ease !important;
 }
 
-/* Active Testimonial Button */
-.avatar-btn.active,
-.testimonial-avatar-btn.active,
-.testimonial-tab-btn.active {
-    background-color: #EAF1FF !important; /* Dim/Soft Light Blue instead of bright solid blue */
-    background: #EAF1FF !important;
-    color: #0052FF !important;
-    border: 1.5px solid #0052FF !important;
-    box-shadow: none !important;
-}
-
-.avatar-btn.active .avatar-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px !important;
-    height: 24px !important;
-    border-radius: 50%;
+/* Circular Avatar Icon inside button */
+.avatar-circle,
+.avatar-btn .avatar-circle,
+.testimonial-tab-btn img,
+.testimonial-tab-btn .avatar-initials {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     background-color: #0052FF !important;
     color: #FFFFFF !important;
-    font-size: 11px !important;
-    font-weight: 700 !important;
-}
-
-.avatar-btn.active .avatar-name {
-    color: #0052FF !important;
+    font-weight: 600 !important;
     font-size: 13px !important;
-    font-weight: 700 !important;
-    opacity: 1 !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
+    flex-shrink: 0 !important;
 }
 
 /* --- Section: 9. FAQ --- */
@@ -2138,30 +2142,32 @@ body.mobile-nav-active .hamburger {
 }
 
 .footer-brand,
+.footer-brand-wrap,
 .footer-logo-wrap {
     display: flex !important;
     flex-direction: row !important; /* Side-by-side */
-    align-items: center !important;
-    gap: 18px !important;
-    max-width: 440px !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    max-width: 380px !important;
 }
 
 .footer-brand img,
 .footer-logo {
-    height: 38px !important;
+    height: 40px !important;
     width: auto !important;
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
     flex-shrink: 0 !important;
-    margin: 0 !important;
     display: block !important;
     filter: brightness(0) invert(1) !important;
 }
 
 .footer-brand p,
-.footer-tagline,
-.footer-brand-text {
+.footer-brand-text,
+.footer-tagline {
+    font-size: 14px !important; /* Increased readable font size */
+    line-height: 1.55 !important;
     color: #A9C2FF !important;
-    font-size: 13px !important;
-    line-height: 1.45 !important;
     margin: 0 !important;
 }
 
@@ -3699,30 +3705,32 @@ a[href*="#contact"]:not(.service-card-link):not(.service-link):not(.mobile-nav-l
 }
 
 .footer-brand,
+.footer-brand-wrap,
 .footer-logo-wrap {
     display: flex !important;
     flex-direction: row !important; /* Side-by-side */
-    align-items: center !important;
-    gap: 18px !important;
-    max-width: 440px !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    max-width: 380px !important;
 }
 
 .footer-brand img,
 .footer-logo {
-    height: 38px !important;
+    height: 40px !important;
     width: auto !important;
-    margin: 0 !important;
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
     display: block !important;
     flex-shrink: 0 !important;
     filter: brightness(0) invert(1) !important;
 }
 
 .footer-brand p,
-.footer-tagline,
-.footer-brand-text {
+.footer-brand-text,
+.footer-tagline {
+    font-size: 14px !important; /* Increased readable font size */
+    line-height: 1.55 !important;
     color: #A9C2FF !important;
-    font-size: 13px !important;
-    line-height: 1.45 !important;
     margin: 0 !important;
 }
 
@@ -3781,70 +3789,131 @@ footer a:hover {
     transform: none !important;
 }
 
-/* 9. Testimonial Buttons Soft Tone */
-.testimonial-avatar-btn,
+/* 9. Restored Expanding Testimonial Avatar Pills */
+.avatar-btn,
 .testimonial-tab-btn,
 .avatar-pill,
-.avatar-btn {
+.testimonial-avatar-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 38px !important;
+    border-radius: 999px !important;
+    padding: 0 !important;
+    background-color: #F1F5F9 !important;
+    border: 1.5px solid transparent !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    user-select: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Inactive / Collapsed State (Circle avatar only) */
+.avatar-btn:not(.active),
+.testimonial-tab-btn:not(.active) {
+    width: 38px !important; /* Circle avatar */
+    background-color: #F1F5F9 !important;
+    border-color: transparent !important;
+}
+
+.avatar-btn:not(.active) .avatar-name,
+.avatar-btn:not(.active) span:not(.avatar-circle),
+.testimonial-tab-btn:not(.active) .avatar-name,
+.testimonial-tab-btn:not(.active) span:not(.avatar-circle) {
+    opacity: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Hover on Inactive or Active State (Expands to pill) */
+.avatar-btn:hover,
+.avatar-btn.active,
+.testimonial-tab-btn:hover,
+.testimonial-tab-btn.active {
+    width: auto !important;
+    padding-right: 14px !important;
+    background-color: #EAF1FF !important;
+    border-color: #0052FF !important;
+}
+
+.avatar-btn:hover .avatar-name,
+.avatar-btn.active .avatar-name,
+.avatar-btn:hover span:not(.avatar-circle),
+.avatar-btn.active span:not(.avatar-circle),
+.testimonial-tab-btn:hover .avatar-name,
+.testimonial-tab-btn.active .avatar-name {
+    opacity: 1 !important;
+    max-width: 140px !important;
+    padding-left: 8px !important;
+    color: #0052FF !important;
     font-size: 13px !important;
     font-weight: 600 !important;
-    border-radius: 999px !important;
-    padding: 6px 14px !important;
-    transition: all 0.2s ease !important;
-    cursor: pointer !important;
+    margin: 0 !important;
+    pointer-events: auto !important;
+    transition: all 0.3s ease !important;
 }
 
-.avatar-btn:not(.active),
-.testimonial-avatar-btn:not(.active),
-.testimonial-tab-btn:not(.active) {
-    background-color: #F1F5F9 !important;
-    background: #F1F5F9 !important;
-    color: #0052FF !important;
-    border: 1px solid transparent !important;
-    box-shadow: none !important;
+/* Circular Avatar Icon inside button */
+.avatar-circle,
+.avatar-btn .avatar-circle,
+.testimonial-tab-btn img,
+.testimonial-tab-btn .avatar-initials {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #0052FF !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    flex-shrink: 0 !important;
 }
 
-.avatar-btn.active,
-.testimonial-avatar-btn.active,
-.testimonial-tab-btn.active {
-    background-color: #EAF1FF !important; /* Soft Light Blue */
-    background: #EAF1FF !important;
-    color: #0052FF !important;
-    border: 1.5px solid #0052FF !important;
-    box-shadow: none !important;
-}
-
-/* 10. Hero Carousel Cards Expansion */
+/* 10. Hero Carousel Cards Expansion (250px) */
 .feature-card,
 .hero-carousel-card,
 .marquee-card,
 .mini-service-card {
-    min-width: 220px !important;
-    width: 220px !important;
-    padding: 18px 20px !important;
+    flex: 0 0 250px !important;
+    min-width: 250px !important;
+    width: 250px !important;
+    padding: 16px 20px !important;
+    background-color: #FFFFFF !important;
     background: #FFFFFF !important;
     border: 1px solid #E2E8F0 !important;
-    border-radius: 14px !important;
+    border-radius: 12px !important;
     display: flex !important;
     flex-direction: column !important;
-    text-align: left !important;
+    align-items: flex-start !important;
     justify-content: center !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
 }
 
 .feature-card h4,
 .hero-carousel-card h4,
-.hero-carousel-card strong {
+.hero-carousel-card strong,
+.mini-service-card h4,
+.feature-card strong {
     font-size: 14px !important;
     font-weight: 700 !important;
     color: #0D0D0D !important;
     margin-bottom: 4px !important;
+    display: block !important;
 }
 
 .feature-card p,
 .hero-carousel-card p,
-.hero-carousel-card span {
-    font-size: 12px !important;
+.hero-carousel-card span,
+.mini-service-card p {
+    font-size: 12.5px !important;
     line-height: 1.4 !important;
     color: #64748B !important;
+    margin: 0 !important;
 }
