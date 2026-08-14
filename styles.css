@@ -2226,8 +2226,10 @@ body.mobile-nav-active .hamburger {
     }
 
     .logo-img {
-        height: 26px !important;
+        height: 34px !important;
         width: auto !important;
+        max-height: 36px !important;
+        object-fit: contain !important;
     }
 
     .hamburger {
@@ -2519,71 +2521,49 @@ body.mobile-nav-active .hamburger {
         line-height: 1.4 !important;
     }
 
-    /* White form card */
+    /* White form card — full width, compact padding */
     .contact-form-wrapper {
         width: 100% !important;
         max-width: 100% !important;
         margin: 24px auto 0 auto !important;
-        padding: 22px 18px !important;
+        padding: 20px 14px !important;
         border-radius: 20px !important;
         box-sizing: border-box !important;
     }
 
-    /* Form rows: stack to single column on mobile */
+    /* Form wrapper inner: 2-column grid layout */
+    .contact-form {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* form-row: also 2-column grid (overrides previous 1-col) */
     .form-row {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
-        width: 100% !important;
+        display: contents !important; /* Let children participate directly in parent grid */
     }
 
-    /* Form groups: reduce vertical breathing room */
+    /* All form groups default to 1 column slot */
     .form-group {
-        margin-bottom: 12px !important;
+        margin-bottom: 0 !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* Labels */
-    .form-group label {
-        font-size: 13px !important;
-        font-weight: 600 !important;
-        margin-bottom: 5px !important;
-        display: block !important;
+    /* Full-width: Service, Message, and Submit button */
+    .form-group:has(#service),
+    .form-group:has(#message),
+    .form-group:has(textarea),
+    .form-group:has(select[name="service"]) {
+        grid-column: 1 / -1 !important;
     }
 
-    /* Text inputs & selects */
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group input[type="tel"],
-    .form-group select,
-    .form-group input {
-        height: 42px !important;
-        padding: 8px 12px !important;
-        font-size: 13.5px !important;
-        font-family: inherit !important;
-        border-radius: 10px !important;
-        border: 1px solid #E2E8F0 !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Textarea */
-    .form-group textarea {
-        height: 80px !important;
-        min-height: 80px !important;
-        max-height: 80px !important;
-        padding: 10px 12px !important;
-        font-size: 13.5px !important;
-        font-family: inherit !important;
-        border-radius: 10px !important;
-        border: 1px solid #E2E8F0 !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Submit button — kill cursive browser default font */
+    /* Submit button: full width, spans both columns */
     .btn-submit,
     button[type="submit"] {
+        grid-column: 1 / -1 !important;
         font-family: inherit !important;
         font-size: 14.5px !important;
         font-weight: 700 !important;
@@ -2594,12 +2574,50 @@ body.mobile-nav-active .hamburger {
         border-radius: 10px !important;
         background: #0F172A !important;
         color: #FFFFFF !important;
-        margin-top: 8px !important;
+        margin-top: 4px !important;
         cursor: pointer !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         border: none !important;
+    }
+
+    /* Labels */
+    .form-group label {
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        margin-bottom: 4px !important;
+        display: block !important;
+    }
+
+    /* Text inputs & selects — compact 40px height */
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group input {
+        height: 40px !important;
+        padding: 6px 10px !important;
+        font-size: 13px !important;
+        font-family: inherit !important;
+        border-radius: 10px !important;
+        border: 1px solid #E2E8F0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Textarea — compact 70px */
+    .form-group textarea {
+        height: 70px !important;
+        min-height: 70px !important;
+        max-height: 70px !important;
+        padding: 8px 10px !important;
+        font-size: 13px !important;
+        font-family: inherit !important;
+        border-radius: 10px !important;
+        border: 1px solid #E2E8F0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     /* Mobile CTA - Hidden on User Request */
