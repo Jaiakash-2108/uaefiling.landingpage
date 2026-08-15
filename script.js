@@ -392,3 +392,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// =========================================================
+// SCROLL-DRIVEN FRAME ANIMATION (SCROLLYTELLING)
+// =========================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollySection = document.querySelector('.scrollytelling-section');
+    const storyFrames = document.querySelectorAll('.story-frame');
+    const progressFill = document.getElementById('storyProgressFill');
+
+    if (scrollySection && storyFrames.length > 0) {
+        window.addEventListener('scroll', () => {
+            const rect = scrollySection.getBoundingClientRect();
+            const sectionHeight = scrollySection.offsetHeight - window.innerHeight;
+            const scrolled = -rect.top;
+
+            if (scrolled >= 0 && scrolled <= sectionHeight) {
+                const progress = scrolled / sectionHeight;
+                const totalFrames = storyFrames.length;
+                let frameIndex = Math.floor(progress * totalFrames);
+                if (frameIndex >= totalFrames) frameIndex = totalFrames - 1;
+
+                storyFrames.forEach((frame, idx) => {
+                    frame.classList.toggle('active', idx === frameIndex);
+                });
+
+                if (progressFill) {
+                    progressFill.style.width = `${Math.min(100, Math.max(16.66, ((frameIndex + 1) / totalFrames) * 100))}%`;
+                }
+            } else if (scrolled < 0) {
+                storyFrames.forEach((frame, idx) => {
+                    frame.classList.toggle('active', idx === 0);
+                });
+                if (progressFill) progressFill.style.width = '16.66%';
+            } else if (scrolled > sectionHeight) {
+                storyFrames.forEach((frame, idx) => {
+                    frame.classList.toggle('active', idx === storyFrames.length - 1);
+                });
+                if (progressFill) progressFill.style.width = '100%';
+            }
+        }, { passive: true });
+    }
+});
+
