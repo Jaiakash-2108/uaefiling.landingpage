@@ -4232,35 +4232,27 @@ footer a:hover {
 }
 
 /* 4. Contact Form: Privacy Policy Disclaimer & Blue Link */
-.form-disclaimer-box {
+.form-privacy-disclaimer {
+    display: block !important;
+    text-align: center !important;
+    margin: 14px auto 0 auto !important;
     width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    margin-top: 14px !important;
-}
-
-.disclaimer-text {
-    text-align: center !important;
+    max-width: 280px !important;
     font-size: 12.5px !important;
     line-height: 1.5 !important;
     color: #94A3B8 !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-    display: block !important;
 }
 
-.disclaimer-link {
+.form-privacy-disclaimer a,
+.privacy-policy-link {
     color: #0052FF !important;
     text-decoration: underline !important;
     font-weight: 600 !important;
-    background: transparent !important;
-    padding: 0 !important;
     display: inline !important;
 }
 
-.disclaimer-link:hover {
+.form-privacy-disclaimer a:hover,
+.privacy-policy-link:hover {
     color: #3D8BFF !important;
 }
 
@@ -4442,17 +4434,17 @@ header.sticky-header.scrolled {
         box-sizing: border-box !important;
     }
 
-    /* Top row: Title + Pill aligned in one even row */
+    /* Stack 'Active License' pill under heading on mobile */
     .hub-header,
     .serve-card-header,
     .showcase-header,
     .graphic-card-header {
         display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: space-between !important;
+        flex-direction: column !important; /* Stack vertically */
+        align-items: flex-start !important; /* Align left */
+        gap: 8px !important;
         width: 100% !important;
-        gap: 4px !important;
+        margin-bottom: 16px !important;
         box-sizing: border-box !important;
     }
 
@@ -4460,24 +4452,24 @@ header.sticky-header.scrolled {
     .serve-card-header h4,
     .showcase-header h4,
     .graphic-chip {
-        font-size: 14px !important;
+        font-size: 16px !important;
         font-weight: 700 !important;
         margin: 0 !important;
-        flex-shrink: 1 !important;
-        white-space: nowrap !important;
     }
 
     .active-license-pill,
     .hub-badge,
     .badge-active,
     .graphic-status-tag {
-        font-size: 10px !important;
-        padding: 3px 7px !important;
+        display: inline-flex !important;
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        padding: 4px 10px !important;
+        border-radius: 999px !important;
+        margin: 0 !important;
+        width: fit-content !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
-        margin: 0 !important;
-        display: inline-flex !important;
-        align-items: center !important;
     }
 
     /* Checklist items stretch full width */
@@ -4490,12 +4482,9 @@ header.sticky-header.scrolled {
     }
 
     /* Form disclaimer force center */
-    .form-disclaimer-box,
-    .disclaimer-text,
-    .privacy-disclaimer-wrapper,
-    .form-privacy-disclaimer,
-    form p {
+    .form-privacy-disclaimer {
         text-align: center !important;
+        margin: 14px auto 0 auto !important;
     }
 }
 
