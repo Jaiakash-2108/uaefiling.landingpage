@@ -4234,15 +4234,20 @@ footer a:hover {
 /* 4. Contact Form: Privacy Policy Disclaimer & Blue Link */
 .form-privacy-disclaimer {
     text-align: center !important;
-    font-size: 12px !important;
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
     color: #94A3B8 !important;
-    margin-top: 10px !important;
+    margin-top: 14px !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    display: block !important;
 }
 
 .privacy-policy-link {
     color: #0052FF !important;
     text-decoration: underline !important;
     font-weight: 600 !important;
+    display: inline !important;
     background: transparent !important;
     padding: 0 !important;
 }
@@ -4410,9 +4415,10 @@ header.sticky-header.scrolled {
    WHO WE SERVE — MOBILE INNER CARD WIDTH EXPANSION (< 768px)
    ========================================================= */
 @media (max-width: 768px) {
-    /* Target the inner white card specifically */
+    /* Expand the inner white card to 100% */
     .hub-showcase-card,
     .serve-inner-card,
+    .showcase-card,
     .serve-card-preview,
     .serve-graphic-card,
     .serve-graphic-container,
@@ -4421,28 +4427,35 @@ header.sticky-header.scrolled {
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        padding: 18px 14px !important; /* Balanced internal padding */
+        padding: 16px 14px !important;
         box-sizing: border-box !important;
     }
 
-    /* Ensure inner header and badge don't clip */
+    /* Header row containing title and pill */
     .hub-header,
     .serve-card-header,
+    .showcase-header,
     .graphic-card-header {
         display: flex !important;
-        align-items: center !important;
+        flex-direction: row !important;
         justify-content: space-between !important;
-        gap: 8px !important;
+        align-items: center !important;
+        gap: 6px !important;
         width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .hub-header h4,
     .serve-card-header h4,
+    .showcase-header h4,
     .graphic-chip {
         font-size: 15px !important;
+        font-weight: 700 !important;
         margin: 0 !important;
+        white-space: nowrap !important;
     }
 
+    /* Keep pill neatly inside */
     .active-license-pill,
     .hub-badge,
     .badge-active,
@@ -4451,6 +4464,8 @@ header.sticky-header.scrolled {
         padding: 3px 8px !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
+        margin: 0 !important;
+        display: inline-flex !important;
     }
 
     /* Checklist items stretch full width */
