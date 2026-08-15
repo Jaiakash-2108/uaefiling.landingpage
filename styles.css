@@ -4427,9 +4427,40 @@ header.sticky-header.scrolled {
 }
 
 /* =========================================================
+   HERO SUB-HEADING / PARAGRAPH HIGH-CONTRAST READABILITY
+   ========================================================= */
+.hero-section p.hero-subtitle,
+.hero-subtitle,
+.hero-description,
+#hero .hero-subtitle {
+    color: #1E293B !important; /* Deep crisp slate black */
+    font-size: 17.5px !important;
+    font-weight: 600 !important; /* Medium-bold for clear visibility */
+    line-height: 1.65 !important;
+    max-width: 680px !important;
+    margin: 0 auto 28px auto !important;
+    text-align: center !important;
+    
+    /* Soft white contrast glow to lift text cleanly from the background image */
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95), 0 2px 10px rgba(255, 255, 255, 0.8) !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+/* =========================================================
    WHO WE SERVE — MOBILE INNER CARD & FORM PRIVACY OVERRIDES (< 768px)
    ========================================================= */
 @media (max-width: 768px) {
+    .hero-section p.hero-subtitle,
+    .hero-subtitle,
+    .hero-description,
+    #hero .hero-subtitle {
+        font-size: 14.5px !important;
+        line-height: 1.5 !important;
+        padding: 0 12px !important;
+        margin-bottom: 22px !important;
+    }
+
     /* Reset/ensure inner card has safe padding */
     .hub-showcase-card,
     .serve-inner-card,
