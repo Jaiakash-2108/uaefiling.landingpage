@@ -4291,7 +4291,8 @@ header.sticky-header.scrolled {
     padding-top: 130px !important;
     padding-bottom: 70px !important; /* Proper bottom breathing space */
     overflow: hidden !important;
-    transition: background 0.08s ease-out !important;
+    transition: none !important; /* Managed smoothly via requestAnimationFrame in JS */
+    will-change: background-image; /* Hardware acceleration hint */
 
     /* Dual-Layer Blend: 
        Layer 1: Bottom vertical fade to 100% white (#FFFFFF)

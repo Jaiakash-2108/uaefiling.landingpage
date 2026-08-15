@@ -22,21 +22,52 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleNavScroll);
     handleNavScroll();
 
-    // Hero Cursor Spotlight Reveal Logic
+    // Ultra-smooth Hero Spotlight with LERP & requestAnimationFrame
     const heroSection = document.querySelector('.hero-section') || document.querySelector('#hero') || document.querySelector('.hero');
     if (heroSection) {
+        let targetX = 50;
+        let targetY = 50;
+        let currentX = 50;
+        let currentY = 50;
+        let isHovered = false;
+        let animationFrameId = null;
+
+        const updateSpotlight = () => {
+            // LERP factor (0.075 for ultra-soft, liquid gliding inertia)
+            const ease = 0.075;
+            currentX += (targetX - currentX) * ease;
+            currentY += (targetY - currentY) * ease;
+
+            heroSection.style.setProperty('--mouse-x', `${currentX.toFixed(3)}%`);
+            heroSection.style.setProperty('--mouse-y', `${currentY.toFixed(3)}%`);
+
+            // Continue animation loop while hovering or settling back to center
+            if (isHovered || Math.abs(targetX - currentX) > 0.01 || Math.abs(targetY - currentY) > 0.01) {
+                animationFrameId = requestAnimationFrame(updateSpotlight);
+            } else {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+        };
+
         heroSection.addEventListener('mousemove', (e) => {
             const rect = heroSection.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 100;
-            const y = ((e.clientY - rect.top) / rect.height) * 100;
-            heroSection.style.setProperty('--mouse-x', `${x.toFixed(2)}%`);
-            heroSection.style.setProperty('--mouse-y', `${y.toFixed(2)}%`);
+            targetX = ((e.clientX - rect.left) / rect.width) * 100;
+            targetY = ((e.clientY - rect.top) / rect.height) * 100;
+            isHovered = true;
+
+            if (!animationFrameId) {
+                animationFrameId = requestAnimationFrame(updateSpotlight);
+            }
         });
 
-        // Reset to center smoothly when mouse leaves
         heroSection.addEventListener('mouseleave', () => {
-            heroSection.style.setProperty('--mouse-x', '50%');
-            heroSection.style.setProperty('--mouse-y', '50%');
+            isHovered = false;
+            targetX = 50;
+            targetY = 50;
+            if (!animationFrameId) {
+                animationFrameId = requestAnimationFrame(updateSpotlight);
+            }
         });
     }
 
