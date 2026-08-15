@@ -4412,16 +4412,31 @@ header.sticky-header.scrolled {
 }
 
 /* =========================================================
-   WHO WE SERVE — MOBILE INNER CARD WIDTH EXPANSION (< 768px)
+   WHO WE SERVE — MOBILE INNER CARD & FORM PRIVACY OVERRIDES (< 768px)
    ========================================================= */
 @media (max-width: 768px) {
-    /* Expand the inner white card to 100% */
+    /* Ensure the outer container allows full width expansion */
+    .serve-content-card,
+    .serve-tab-panel,
+    .who-we-serve-card,
+    .serve-card-box,
+    .serve-panel-grid,
+    .serve-panel-right,
+    .serve-graphic-container,
+    .serve-grid {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Ensure inner card is full width with no overflow clipping */
     .hub-showcase-card,
     .serve-inner-card,
     .showcase-card,
     .serve-card-preview,
     .serve-graphic-card,
-    .serve-graphic-container,
     .serve-content-card > div:last-child {
         width: 100% !important;
         max-width: 100% !important;
@@ -4429,6 +4444,7 @@ header.sticky-header.scrolled {
         margin-right: 0 !important;
         padding: 16px 14px !important;
         box-sizing: border-box !important;
+        overflow: visible !important;
     }
 
     /* Header row containing title and pill */
@@ -4475,6 +4491,12 @@ header.sticky-header.scrolled {
         width: 100% !important;
         box-sizing: border-box !important;
         padding: 10px 12px !important;
+    }
+
+    /* Form disclaimer force center */
+    .form-privacy-disclaimer,
+    form p {
+        text-align: center !important;
     }
 }
 
