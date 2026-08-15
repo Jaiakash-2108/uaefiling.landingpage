@@ -4405,3 +4405,61 @@ header.sticky-header.scrolled {
     position: relative !important;
     z-index: 2 !important;
 }
+
+/* =========================================================
+   WHO WE SERVE — MOBILE INNER CARD WIDTH EXPANSION (< 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+    /* Target the inner white card specifically */
+    .hub-showcase-card,
+    .serve-inner-card,
+    .serve-card-preview,
+    .serve-graphic-card,
+    .serve-graphic-container,
+    .serve-content-card > div:last-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 18px 14px !important; /* Balanced internal padding */
+        box-sizing: border-box !important;
+    }
+
+    /* Ensure inner header and badge don't clip */
+    .hub-header,
+    .serve-card-header,
+    .graphic-card-header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .hub-header h4,
+    .serve-card-header h4,
+    .graphic-chip {
+        font-size: 15px !important;
+        margin: 0 !important;
+    }
+
+    .active-license-pill,
+    .hub-badge,
+    .badge-active,
+    .graphic-status-tag {
+        font-size: 11px !important;
+        padding: 3px 8px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Checklist items stretch full width */
+    .hub-checklist-item,
+    .serve-checklist li,
+    .graphic-feature-list li {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 10px 12px !important;
+    }
+}
+
