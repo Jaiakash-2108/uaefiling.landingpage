@@ -4232,27 +4232,44 @@ footer a:hover {
 }
 
 /* 4. Contact Form: Privacy Policy Disclaimer & Blue Link */
-.form-privacy-disclaimer {
+.privacy-disclaimer-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
     text-align: center !important;
-    font-size: 12.5px !important;
-    line-height: 1.5 !important;
-    color: #94A3B8 !important;
-    margin-top: 14px !important;
-    margin-bottom: 0 !important;
     width: 100% !important;
-    display: block !important;
+    margin-top: 14px !important;
 }
 
-.privacy-policy-link {
+.privacy-line-1 {
+    display: block !important;
+    font-size: 13px !important;
+    color: #94A3B8 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.privacy-line-2 {
+    display: block !important;
+    font-size: 13px !important;
+    color: #94A3B8 !important;
+    text-align: center !important;
+    margin-top: 2px !important;
+    width: 100% !important;
+}
+
+.privacy-link {
     color: #0052FF !important;
     text-decoration: underline !important;
     font-weight: 600 !important;
-    display: inline !important;
     background: transparent !important;
     padding: 0 !important;
+    display: inline !important;
 }
 
-.privacy-policy-link:hover {
+.privacy-link:hover {
     color: #3D8BFF !important;
 }
 
@@ -4415,7 +4432,10 @@ header.sticky-header.scrolled {
    WHO WE SERVE — MOBILE INNER CARD & FORM PRIVACY OVERRIDES (< 768px)
    ========================================================= */
 @media (max-width: 768px) {
-    /* Ensure the outer container allows full width expansion */
+    /* Remove any restrictive max-width / side margin on the parent container */
+    .who-we-serve,
+    .serve-section,
+    .serve-container,
     .serve-content-card,
     .serve-tab-panel,
     .who-we-serve-card,
@@ -4424,30 +4444,33 @@ header.sticky-header.scrolled {
     .serve-panel-right,
     .serve-graphic-container,
     .serve-grid {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
         width: 100% !important;
         max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
         box-sizing: border-box !important;
     }
 
-    /* Ensure inner card is full width with no overflow clipping */
+    /* Force the inner white box (DMCC / JAFZA Hub) to stretch 100% full width */
     .hub-showcase-card,
     .serve-inner-card,
     .showcase-card,
     .serve-card-preview,
     .serve-graphic-card,
-    .serve-content-card > div:last-child {
+    .serve-content-card > div:last-child,
+    div[class*="showcase"],
+    div[class*="hub"],
+    div[class*="graphic-card"] {
         width: 100% !important;
         max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding: 16px 14px !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 16px !important;
         box-sizing: border-box !important;
         overflow: visible !important;
     }
 
-    /* Header row containing title and pill */
+    /* Ensure Title and Active License pill stay strictly inside on one clean line */
     .hub-header,
     .serve-card-header,
     .showcase-header,
@@ -4456,8 +4479,8 @@ header.sticky-header.scrolled {
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
-        gap: 6px !important;
         width: 100% !important;
+        gap: 6px !important;
         box-sizing: border-box !important;
     }
 
@@ -4477,7 +4500,7 @@ header.sticky-header.scrolled {
     .badge-active,
     .graphic-status-tag {
         font-size: 11px !important;
-        padding: 3px 8px !important;
+        padding: 4px 10px !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
         margin: 0 !important;
@@ -4494,6 +4517,7 @@ header.sticky-header.scrolled {
     }
 
     /* Form disclaimer force center */
+    .privacy-disclaimer-wrapper,
     .form-privacy-disclaimer,
     form p {
         text-align: center !important;
