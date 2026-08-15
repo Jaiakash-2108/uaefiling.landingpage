@@ -4655,3 +4655,50 @@ header.sticky-header.scrolled {
     }
 }
 
+/* =========================================================
+   DESKTOP ONLY (>= 769px) — SINGLE-LINE PRIVACY DISCLAIMER
+   ========================================================= */
+@media (min-width: 769px) {
+    .form-disclaimer-wrapper,
+    .form-privacy-wrapper,
+    .form-privacy-disclaimer,
+    form p.disclaimer-text,
+    form .form-disclaimer-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        text-align: center !important;
+        white-space: nowrap !important; /* Forces single line on desktop */
+        margin-top: 14px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .form-disclaimer-wrapper p,
+    .form-privacy-wrapper p,
+    .form-privacy-disclaimer p {
+        display: inline-block !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .form-privacy-wrapper span,
+    .privacy-disclaimer-wrapper span,
+    .disclaimer-text span {
+        display: inline !important; /* Cancel block line breaks on desktop */
+        white-space: nowrap !important;
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+
+    .form-disclaimer-wrapper br,
+    .form-privacy-wrapper br,
+    .privacy-disclaimer-wrapper br,
+    form p br {
+        display: none !important; /* Hide line breaks on desktop */
+    }
+}
+
+
