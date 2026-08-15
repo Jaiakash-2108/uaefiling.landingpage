@@ -22,6 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleNavScroll);
     handleNavScroll();
 
+    // Hero Cursor Spotlight Reveal Logic
+    const heroSection = document.querySelector('.hero-section') || document.querySelector('#hero') || document.querySelector('.hero');
+    if (heroSection) {
+        heroSection.addEventListener('mousemove', (e) => {
+            const rect = heroSection.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            heroSection.style.setProperty('--mouse-x', `${x.toFixed(2)}%`);
+            heroSection.style.setProperty('--mouse-y', `${y.toFixed(2)}%`);
+        });
+
+        // Reset to center smoothly when mouse leaves
+        heroSection.addEventListener('mouseleave', () => {
+            heroSection.style.setProperty('--mouse-x', '50%');
+            heroSection.style.setProperty('--mouse-y', '50%');
+        });
+    }
+
     // 1. Mobile Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.getElementById('mobile-nav');
@@ -343,23 +361,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-
-
-/* Hero Cursor Spotlight Reveal Logic */
-const heroSection = document.querySelector('.hero-section') || document.querySelector('#hero');
-if (heroSection) {
-  heroSection.addEventListener('mousemove', (e) => {
-    const rect = heroSection.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    heroSection.style.setProperty('--mouse-x', `${x.toFixed(2)}%`);
-    heroSection.style.setProperty('--mouse-y', `${y.toFixed(2)}%`);
-  });
-
-  // Reset to center smoothly when mouse leaves
-  heroSection.addEventListener('mouseleave', () => {
-    heroSection.style.setProperty('--mouse-x', '50%');
-    heroSection.style.setProperty('--mouse-y', '50%');
-  });
-}
