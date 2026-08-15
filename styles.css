@@ -4232,19 +4232,18 @@ footer a:hover {
 }
 
 /* 4. Contact Form: Privacy Policy Disclaimer & Blue Link */
-.form-privacy-disclaimer {
-    display: block !important;
+.form-privacy-disclaimer,
+.form-disclaimer-box,
+form p.privacy-text {
     text-align: center !important;
-    margin: 14px auto 0 auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     width: 100% !important;
-    max-width: 280px !important;
-    font-size: 12.5px !important;
-    line-height: 1.5 !important;
-    color: #94A3B8 !important;
 }
 
 .form-privacy-disclaimer a,
-.privacy-policy-link {
+.privacy-policy-link,
+.disclaimer-link {
     color: #0052FF !important;
     text-decoration: underline !important;
     font-weight: 600 !important;
@@ -4252,7 +4251,8 @@ footer a:hover {
 }
 
 .form-privacy-disclaimer a:hover,
-.privacy-policy-link:hover {
+.privacy-policy-link:hover,
+.disclaimer-link:hover {
     color: #3D8BFF !important;
 }
 
