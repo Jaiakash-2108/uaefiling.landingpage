@@ -4286,7 +4286,13 @@ header.sticky-header.scrolled {
     --mouse-x: 50%;
     --mouse-y: 50%;
     background-image: 
-        radial-gradient(circle 380px at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.88) 70%, rgba(255, 255, 255, 0.98) 100%),
+        radial-gradient(
+            circle 550px at var(--mouse-x) var(--mouse-y), 
+            rgba(255, 255, 255, 0.18) 0%, 
+            rgba(255, 255, 255, 0.55) 45%, 
+            rgba(255, 255, 255, 0.74) 80%,
+            rgba(255, 255, 255, 0.82) 100%
+        ),
         url('assest/hero-skyline.jpg') !important;
     background-size: cover !important;
     background-position: center 25% !important;
@@ -4294,27 +4300,45 @@ header.sticky-header.scrolled {
     padding-top: 130px !important;
     padding-bottom: 40px !important;
     overflow: hidden !important;
-    transition: background 0.1s ease-out !important;
+    transition: background 0.08s ease-out !important;
 }
 
 /* Option 1: Dubai Architectural Skyline (Default Active) */
 .hero-bg-skyline {
     background-image: 
-        radial-gradient(circle 380px at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.88) 70%, rgba(255, 255, 255, 0.98) 100%),
+        radial-gradient(
+            circle 550px at var(--mouse-x) var(--mouse-y), 
+            rgba(255, 255, 255, 0.18) 0%, 
+            rgba(255, 255, 255, 0.55) 45%, 
+            rgba(255, 255, 255, 0.74) 80%,
+            rgba(255, 255, 255, 0.82) 100%
+        ),
         url('assest/hero-skyline.jpg') !important;
 }
 
 /* Option 2: Maritime & Logistics Port */
 .hero-bg-port {
     background-image: 
-        radial-gradient(circle 380px at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.88) 70%, rgba(255, 255, 255, 0.98) 100%),
+        radial-gradient(
+            circle 550px at var(--mouse-x) var(--mouse-y), 
+            rgba(255, 255, 255, 0.18) 0%, 
+            rgba(255, 255, 255, 0.55) 45%, 
+            rgba(255, 255, 255, 0.74) 80%,
+            rgba(255, 255, 255, 0.82) 100%
+        ),
         url('assest/hero-port.jpg') !important;
 }
 
 /* Option 3: Corporate Glass Office Vista */
 .hero-bg-office {
     background-image: 
-        radial-gradient(circle 380px at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.88) 70%, rgba(255, 255, 255, 0.98) 100%),
+        radial-gradient(
+            circle 550px at var(--mouse-x) var(--mouse-y), 
+            rgba(255, 255, 255, 0.18) 0%, 
+            rgba(255, 255, 255, 0.55) 45%, 
+            rgba(255, 255, 255, 0.74) 80%,
+            rgba(255, 255, 255, 0.82) 100%
+        ),
         url('assest/hero-office.jpg') !important;
 }
 
