@@ -4232,35 +4232,26 @@ footer a:hover {
 }
 
 /* 4. Contact Form: Privacy Policy Disclaimer & Blue Link */
-.privacy-disclaimer-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
+.form-disclaimer-box {
     width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
     margin-top: 14px !important;
 }
 
-.privacy-line-1 {
-    display: block !important;
-    font-size: 13px !important;
-    color: #94A3B8 !important;
-    white-space: nowrap !important;
+.disclaimer-text {
     text-align: center !important;
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+    color: #94A3B8 !important;
+    margin: 0 auto !important;
     width: 100% !important;
+    display: block !important;
 }
 
-.privacy-line-2 {
-    display: block !important;
-    font-size: 13px !important;
-    color: #94A3B8 !important;
-    text-align: center !important;
-    margin-top: 2px !important;
-    width: 100% !important;
-}
-
-.privacy-link {
+.disclaimer-link {
     color: #0052FF !important;
     text-decoration: underline !important;
     font-weight: 600 !important;
@@ -4269,7 +4260,7 @@ footer a:hover {
     display: inline !important;
 }
 
-.privacy-link:hover {
+.disclaimer-link:hover {
     color: #3D8BFF !important;
 }
 
@@ -4432,26 +4423,7 @@ header.sticky-header.scrolled {
    WHO WE SERVE — MOBILE INNER CARD & FORM PRIVACY OVERRIDES (< 768px)
    ========================================================= */
 @media (max-width: 768px) {
-    /* Remove any restrictive max-width / side margin on the parent container */
-    .who-we-serve,
-    .serve-section,
-    .serve-container,
-    .serve-content-card,
-    .serve-tab-panel,
-    .who-we-serve-card,
-    .serve-card-box,
-    .serve-panel-grid,
-    .serve-panel-right,
-    .serve-graphic-container,
-    .serve-grid {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Force the inner white box (DMCC / JAFZA Hub) to stretch 100% full width */
+    /* Reset/ensure inner card has safe padding */
     .hub-showcase-card,
     .serve-inner-card,
     .showcase-card,
@@ -4465,22 +4437,22 @@ header.sticky-header.scrolled {
         max-width: 100% !important;
         min-width: 100% !important;
         margin: 0 !important;
-        padding: 20px 16px !important;
+        padding: 16px 14px !important;
+        overflow: hidden !important;
         box-sizing: border-box !important;
-        overflow: visible !important;
     }
 
-    /* Ensure Title and Active License pill stay strictly inside on one clean line */
+    /* Top row: Title + Pill aligned in one even row */
     .hub-header,
     .serve-card-header,
     .showcase-header,
     .graphic-card-header {
         display: flex !important;
         flex-direction: row !important;
-        justify-content: space-between !important;
         align-items: center !important;
+        justify-content: space-between !important;
         width: 100% !important;
-        gap: 6px !important;
+        gap: 4px !important;
         box-sizing: border-box !important;
     }
 
@@ -4488,23 +4460,24 @@ header.sticky-header.scrolled {
     .serve-card-header h4,
     .showcase-header h4,
     .graphic-chip {
-        font-size: 15px !important;
+        font-size: 14px !important;
         font-weight: 700 !important;
         margin: 0 !important;
+        flex-shrink: 1 !important;
         white-space: nowrap !important;
     }
 
-    /* Keep pill neatly inside */
     .active-license-pill,
     .hub-badge,
     .badge-active,
     .graphic-status-tag {
-        font-size: 11px !important;
-        padding: 4px 10px !important;
+        font-size: 10px !important;
+        padding: 3px 7px !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
         margin: 0 !important;
         display: inline-flex !important;
+        align-items: center !important;
     }
 
     /* Checklist items stretch full width */
@@ -4517,6 +4490,8 @@ header.sticky-header.scrolled {
     }
 
     /* Form disclaimer force center */
+    .form-disclaimer-box,
+    .disclaimer-text,
     .privacy-disclaimer-wrapper,
     .form-privacy-disclaimer,
     form p {
