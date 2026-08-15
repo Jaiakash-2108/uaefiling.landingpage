@@ -1286,27 +1286,32 @@ body.mobile-nav-active .hamburger {
     z-index: 1;
 }
 
-.step-item {
+.step-item,
+.process-step,
+.step-card,
+.process-card {
     position: relative;
     z-index: 2;
     display: flex;
     gap: 1.25rem;
     padding: 1.25rem 1.5rem;
-    background-color: #FFFFFF;
-    border: 1px solid var(--border-subtle);
-    border-left: 4px solid var(--accent-primary);
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    background-color: #FFFFFF !important;
+    border: 1px solid #EAF1FF !important;
+    border-left: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 10px rgba(0, 82, 255, 0.04) !important;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
         box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
         border-color 0.3s ease;
 }
 
-.step-item:hover {
+.step-item:hover,
+.process-step:hover,
+.step-card:hover,
+.process-card:hover {
     transform: translateX(4px);
-    box-shadow: 0 8px 24px rgba(0, 82, 255, 0.08);
-    border-color: var(--accent-primary);
-    border-left-color: var(--accent-hover);
+    box-shadow: 0 8px 24px rgba(0, 82, 255, 0.08) !important;
+    border-color: var(--accent-primary) !important;
 }
 
 .step-number {
@@ -4185,4 +4190,64 @@ footer a:hover {
         height: 40px !important;
         font-size: 13.5px !important;
     }
-}
+}
+
+/* =========================================================
+   UI & CONTENT POLISH ENHANCEMENTS
+   ========================================================= */
+
+/* 1. Hero Section: Operated By Highlight Text */
+.hero-operated-highlight {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #64748B !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+    letter-spacing: 0.2px !important;
+}
+
+/* 2. Process Steps: Soft Light Blue Border & No Left Bar */
+.process-step,
+.step-card,
+.process-card,
+.step-item {
+    border-left: none !important;
+    border: 1px solid #EAF1FF !important;
+    background-color: #FFFFFF !important;
+    box-shadow: 0 2px 10px rgba(0, 82, 255, 0.04) !important;
+    border-radius: 16px !important;
+}
+
+/* 3. FAQ Category Headings to Primary Blue */
+.faq-category-title,
+.faq-group-title,
+.faq-column h3,
+.faq-group h3,
+.faq-section h3 {
+    color: #0052FF !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+}
+
+/* 4. Contact Form: Privacy Policy Disclaimer & Blue Link */
+.form-privacy-disclaimer {
+    text-align: center !important;
+    font-size: 12px !important;
+    color: #94A3B8 !important;
+    margin-top: 10px !important;
+}
+
+.privacy-policy-link {
+    color: #0052FF !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.privacy-policy-link:hover {
+    color: #3D8BFF !important;
+}
+
