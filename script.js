@@ -3,7 +3,25 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+    // Apply default Option 1 to Hero
+    const hero = document.querySelector('.hero-section') || document.querySelector('#hero') || document.querySelector('.hero');
+    if (hero && !hero.classList.contains('hero-bg-skyline') && !hero.classList.contains('hero-bg-port') && !hero.classList.contains('hero-bg-office')) {
+        hero.classList.add('hero-bg-skyline');
+    }
+
+    // Navbar Glassmorphism Scroll Listener
+    const nav = document.querySelector('.navbar') || document.querySelector('header');
+    const handleNavScroll = () => {
+        if (!nav) return;
+        if (window.scrollY > 30) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    };
+    window.addEventListener('scroll', handleNavScroll);
+    handleNavScroll();
+
     // 1. Mobile Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.getElementById('mobile-nav');
