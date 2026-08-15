@@ -4317,3 +4317,27 @@ header.sticky-header.scrolled {
 }
 
 
+
+/* Hero Interactive Cursor Spotlight Layer */
+.hero-section, #hero {
+  position: relative !important;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  background-image: 
+    /* Dynamic spotlight mask: cursor area becomes transparent/clear, outer stays milky-white for text readability */
+    radial-gradient(circle 390px at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.88) 70%, rgba(255, 255, 255, 0.98) 100%),
+    url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=80") !important;
+  background-size: cover !important;
+  background-position: center 25% !important;
+  transition: background 0.1s ease-out !important;
+}
+
+/* Ensure all hero text & elements remain perfectly sharp and readable above the reveal layer */
+.hero-section h1,
+.hero-section p,
+.hero-section .hero-badge,
+.hero-section .hero-cta,
+.hero-section .hero-carousel-container {
+  position: relative !important;
+  z-index: 2 !important;
+}
