@@ -121,7 +121,7 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | Attribute | Details |
 | :--- | :--- |
 | **Purpose** | Step-by-step onboarding flow and estimated turnaround times. |
-| **Exact HTML Content** | `The Process`<br>`Three steps to stay compliant`<br>Step 1: Submit Your Enquiry<br>Step 2: Speak with a Specialist<br>Step 3: We Handle Everything<br><br>**Average Timelines:** Visa (3-5 days), License (5-7 days), Customs (48 hours). |
+| **Exact HTML Content** | `The Process`<br>`How to set up your UAE trading company in four steps`<br>`One team manages each stage. A clear document checklist and written scope are agreed before any work begins.`<br>Step 1: Book a 15-Minute Advisory Call<br>Step 2: Receive Your Recommended Setup Route and Document Checklist<br>Step 3: We Coordinate Your Company Formation, Bank File and Tax Registration<br>Step 4: Receive Your Full Handover Pack<br><br>**Average Timelines:** Visa (3-5 days), License (5-7 days), Customs (48 hours). |
 | **Color Mapping** | **Background:** Pure White (`#FFFFFF`).<br>**Step Numbers:** Background Deep Navy (`#0A1F44`), Text Pure White (`#FFFFFF`).<br>**Timeline Box:** Background Pure White (`#FFFFFF`), Border `1px solid #EAF1FF`.<br>**SLA Badge:** Background Light Blue Tint (`#EAF1FF`), Text Primary Blue (`#0052FF`).<br>**Timeline Pill:** Background Light Blue Tint (`#EAF1FF`), Text Near Black (`#0D0D0D`). |
 | **Responsive Behavior** | **Desktop:** 3:2 grid split.<br>**Mobile:** Single-column vertical stack, 2-line stacked timeline cards (Icon+Title on top, duration pill below). |
 
