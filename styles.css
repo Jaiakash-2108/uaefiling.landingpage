@@ -4772,18 +4772,24 @@ header.sticky-header.scrolled {
 }
 
 /* 1. Pill Badge - Clean Uppercase Style matching 'WHO WE SERVE' */
-.traders-pill-badge {
-  display: inline-block !important;
-  padding: 5px 14px !important;
+.traders-pill-badge,
+#why-traders-come-to-us .traders-pill-badge,
+#why-traders-come-to-us .pill-badge {
+  display: inline-flex !important;
+  width: fit-content !important;
+  max-width: max-content !important;
+  align-self: flex-start !important;
+  padding: 4px 14px !important;
   background: #EFF6FF !important;
   border: 1px solid #DBEAFE !important;
   border-radius: 9999px !important;
-  font-size: 11.5px !important;
+  font-size: 11px !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.8px !important;
   color: #0052FF !important;
-  margin-bottom: 12px !important;
+  margin-bottom: 16px !important;
+  box-sizing: border-box !important;
 }
 
 .traders-main-title {
