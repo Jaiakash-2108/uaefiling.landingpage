@@ -1,10 +1,10 @@
-# UAE Filing Landing Page - Project Specification (SSOT)
+# CoreBridge Landing Page - Project Specification (SSOT)
 
 ## Project Name
-UAE Filing Landing Page Implementation
+CoreBridge Landing Page Implementation
 
 ## Goal
-To implement a high-converting, responsive landing page for **uaefiling.com** using the provided fixed HTML content and logo. The implementation strictly adheres to the official 60-30-10 brand color system. This document serves as the Single Source of Truth (SSOT).
+To implement a high-converting, responsive landing page for **corebridge.com** using the provided fixed HTML content and logo. The implementation strictly adheres to the official 60-30-10 brand color system. This document serves as the Single Source of Truth (SSOT).
 
 ## Document Overview
 This document defines the exact content, structure, buttons, styling, 60-30-10 color distribution, CSS variables, and responsive behaviors for every section of the landing page.
@@ -65,7 +65,7 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | Attribute | Details |
 | :--- | :--- |
 | **Purpose** | A sticky navigation bar for branding and quick contact access. |
-| **Exact HTML Content** | `UAEFiling`<br>`+971-586 450 918`<br>`Book Consultation` |
+| **Exact HTML Content** | `CoreBridge`<br>`+971-586 450 918`<br>`Book Consultation` |
 | **Color Mapping** | **Background:** Pure White (`#FFFFFF`) with subtle border (`1px solid #EAF1FF`) and backdrop blur.<br>**Logo/Brand:** Crisp official logo image.<br>**Nav Links:** Near Black (`#0D0D0D`) on hover / Muted Body Text (`#444444`).<br>**CTA Button:** Background Primary Blue (`#0052FF`), Text Pure White (`#FFFFFF`), Hover Accent Blue (`#3D8BFF`). |
 | **Buttons Used** | "Book Consultation" (Primary CTA), Mobile Hamburger Menu Button |
 | **Responsive Behavior** | **Desktop/Tablet:** Full logo, navigation links, and "Book Consultation" button visible.<br>**Mobile (<768px):** Height 56px, Logo height 34px, Hamburger drawer menu overlay. |
@@ -92,7 +92,7 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | Attribute | Details |
 | :--- | :--- |
 | **Purpose** | High-contrast credibility section highlighting proven track record. |
-| **Exact HTML Content** | `5,000+` / `Businesses Served`<br>`15+` / `UAE Freezones Covered`<br>`10+` / `Years Experience`<br>`98%` / `Client Renewal Rate`<br>`UAE Filing is operated by Corebridge Corporate Solutions, Dubai, UAE.` |
+| **Exact HTML Content** | `5,000+` / `Businesses Served`<br>`15+` / `UAE Freezones Covered`<br>`10+` / `Years Experience`<br>`98%` / `Client Renewal Rate`<br>`CoreBridge is operated by Corebridge Corporate Solutions, Dubai, UAE.` |
 | **Color Mapping** | **Container Background:** Deep Navy (`#0A1F44`).<br>**Numbers / Main Stats:** Pure White (`#FFFFFF`).<br>**Labels / Subtext:** Light Blue Subtext (`#A9C2FF`).<br>**Container Border Radius:** `24px` on all 4 corners with `overflow: hidden`. |
 | **Responsive Behavior** | **Desktop:** 4 columns side-by-side (1x4 grid).<br>**Mobile:** 2x2 grid, centered with `calc(100% - 32px)` width. |
 
@@ -120,11 +120,11 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | **Color Mapping** | **Background:** Pure White (`#FFFFFF`).<br>**Panels:** Background Pure White (`#FFFFFF`), Border `1px solid #EAF1FF`.<br>**Pill Badges:** Background Light Blue Tint (`#EAF1FF`), Text Primary Blue (`#0052FF`).<br>**List Text:** Near Black (`#0D0D0D`) / Muted Body Text (`#444444`). |
 | **Responsive Behavior** | **Desktop:** 2-column grid.<br>**Mobile:** 1-column vertical stack. |
 
-### 8. Why UAE Filing & Testimonial Switcher
+### 8. Why CoreBridge & Testimonial Switcher
 | Attribute | Details |
 | :--- | :--- |
 | **Purpose** | Value propositions and interactive client reviews. |
-| **Exact HTML Content** | `Why UAE Filing`<br>`Why Businesses Choose Us`<br>3 Values: One Point of Contact, Transparent Pricing, Government Liaison Included.<br>3 Quotes: Logistics Co (UK), E-Commerce Trader (India), Import/Export (Oman). |
+| **Exact HTML Content** | `Why CoreBridge`<br>`Why Businesses Choose Us`<br>3 Values: One Point of Contact, Transparent Pricing, Government Liaison Included.<br>3 Quotes: Logistics Co (UK), E-Commerce Trader (India), Import/Export (Oman). |
 | **Color Mapping** | **Background:** Pure White (`#FFFFFF`).<br>**Value Cards:** Background Pure White (`#FFFFFF`), Border `1px solid #EAF1FF`.<br>**Active Testimonial Pill:** Background Primary Blue (`#0052FF`), Text Pure White (`#FFFFFF`).<br>**Inactive Testimonial Avatar:** Background Light Blue Tint (`#EAF1FF`), Text Near Black (`#0D0D0D`). |
 | **Responsive Behavior** | **Desktop:** 2-column split.<br>**Mobile:** Stacked vertical layout, compact testimonial dock with min-height lock. |
 
@@ -164,7 +164,7 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | **Services Grid** | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 32px 0 !important; margin-bottom: 40px` |
 | **The Process** | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 32px 0 !important; margin-bottom: 40px` |
 | **Coverage** | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 32px 0 !important; margin-bottom: 40px` |
-| **Why UAE Filing** | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 32px 0 !important; margin-bottom: 40px` |
+| **Why CoreBridge** | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 32px 0 !important; margin-bottom: 40px` |
 | **FAQ** | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 48px 0 !important; margin-bottom: 48px` | `padding: 32px 0 !important; margin-bottom: 40px` |
 | **Get In Touch** | `padding: 48px 40px !important; margin: 0 auto 60px` | `padding: 48px 40px !important; margin: 0 auto 60px` | `padding: 28px 12px !important; margin: 24px auto 40px` |
 | **Footer** | `padding: 96px 0 48px 0;` | `padding: 96px 0 48px 0;` | `padding: 48px 0 32px 0;` |

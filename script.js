@@ -1,5 +1,5 @@
 /**
- * UAE Filing - Interaction Logic
+ * CoreBridge - Interaction Logic
  */
 
 document.addEventListener('DOMContentLoaded', () => {
