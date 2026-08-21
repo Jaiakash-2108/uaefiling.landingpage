@@ -4741,5 +4741,220 @@ header.sticky-header.scrolled {
   }
 }
 
+/* ==========================================================
+   SECTION 2.5: WHY TRADERS COME TO US (STACKING STICKY CARDS)
+   ========================================================== */
+.traders-section {
+  width: 100% !important;
+  background-color: #FFFFFF !important;
+  padding: 90px 20px !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-sizing: border-box !important;
+}
+
+.traders-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: 1.1fr 1fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+}
+
+/* Left Column: Sticky Box */
+.traders-left-sticky {
+  position: sticky !important;
+  top: 100px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+.traders-pill-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  align-self: flex-start !important;
+  padding: 6px 14px !important;
+  background: #EFF6FF !important;
+  border: 1px solid #DBEAFE !important;
+  border-radius: 999px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #0052FF !important;
+  letter-spacing: 0.3px !important;
+}
+
+.traders-pill-badge .status-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #22C55E !important;
+}
+
+.traders-main-title {
+  font-size: 38px !important;
+  font-weight: 800 !important;
+  line-height: 1.22 !important;
+  color: #0F172A !important;
+  letter-spacing: -0.6px !important;
+  margin: 0 !important;
+}
+
+.traders-intro-desc {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #64748B !important;
+  margin: 0 !important;
+}
+
+.traders-solution-box {
+  background: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  border-left: 4px solid #0052FF !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  margin-top: 6px !important;
+}
+
+.solution-heading {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+  line-height: 1.4 !important;
+  margin: 0 0 8px 0 !important;
+}
+
+.solution-desc {
+  font-size: 14.5px !important;
+  line-height: 1.55 !important;
+  color: #475569 !important;
+  margin: 0 !important;
+}
+
+.traders-action-row {
+  margin-top: 10px !important;
+}
+
+.traders-btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #0052FF !important;
+  color: #FFFFFF !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.2s ease !important;
+  box-shadow: 0 4px 14px rgba(0, 82, 255, 0.25) !important;
+}
+
+.traders-btn-primary:hover {
+  background: #0040CC !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Right Column: Stacking Cards Container */
+.traders-right-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 30px !important;
+  position: relative !important;
+  padding-bottom: 40px !important;
+}
+
+/* Card Stacking Key: Sticky with staggered top offset */
+.stack-challenge-card {
+  position: sticky !important;
+  top: calc(100px + (var(--card-index) * 24px)) !important;
+  width: 100% !important;
+  z-index: calc(10 + var(--card-index)) !important;
+}
+
+.challenge-card-inner {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 18px !important;
+  padding: 26px 28px !important;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.challenge-card-inner:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.12) !important;
+}
+
+.challenge-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 14px !important;
+}
+
+.challenge-icon-box {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 10px !important;
+  background: #FEF2F2 !important;
+  border: 1px solid #FEE2E2 !important;
+  color: #EF4444 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+}
+
+.challenge-badge {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94A3B8 !important;
+}
+
+.challenge-text {
+  font-size: 15.5px !important;
+  line-height: 1.6 !important;
+  color: #1E293B !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .traders-container {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .traders-left-sticky {
+    position: static !important;
+  }
+
+  .stack-challenge-card {
+    position: static !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .traders-section {
+    padding: 60px 16px !important;
+  }
+
+  .traders-main-title {
+    font-size: 28px !important;
+  }
+
+  .challenge-card-inner {
+    padding: 20px !important;
+  }
+}
+
+
 
 
