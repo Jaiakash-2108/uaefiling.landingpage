@@ -92,7 +92,7 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | Attribute | Details |
 | :--- | :--- |
 | **Purpose** | High-contrast credibility section highlighting proven track record. |
-| **Exact HTML Content** | `5,000+` / `Businesses Served`<br>`15+` / `UAE Freezones Covered`<br>`10+` / `Years Experience`<br>`98%` / `Client Renewal Rate`<br>`CoreBridge is operated by Corebridge Corporate Solutions, Dubai, UAE.` |
+| **Exact HTML Content** | `5,000+` / `Businesses Served`<br>`15+` / `UAE Freezones Covered`<br>`10+` / `Years Experience`<br>`98%` / `Client Renewal Rate`<br>`UAEfiling is operated by Corebridge Corporate Solutions, Dubai, UAE.` |
 | **Color Mapping** | **Container Background:** Deep Navy (`#0A1F44`).<br>**Numbers / Main Stats:** Pure White (`#FFFFFF`).<br>**Labels / Subtext:** Light Blue Subtext (`#A9C2FF`).<br>**Container Border Radius:** `24px` on all 4 corners with `overflow: hidden`. |
 | **Responsive Behavior** | **Desktop:** 4 columns side-by-side (1x4 grid).<br>**Mobile:** 2x2 grid, centered with `calc(100% - 32px)` width. |
 
