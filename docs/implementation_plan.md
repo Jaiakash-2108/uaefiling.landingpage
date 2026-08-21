@@ -79,6 +79,19 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | **Buttons Used** | "Get Free Consultation" (Primary CTA), 5x Duplicated Marquee Feature Cards |
 | **Responsive Behavior** | **Desktop:** 2-column layout / centered stack with marquee slider.<br>**Mobile:** Compact single column, infinite seamless marquee track. |
 
+### 2.5. Why Traders Come to Us Section (Split Layout)
+| Attribute | Details |
+| :--- | :--- |
+| **Purpose** | Highlight core challenges international exporters/traders face and present Core Bridge as the unified, end-to-end Dubai coordination partner. |
+| **Positioning** | Placed directly between Hero Section and Who We Serve Section. |
+| **Pill Badge** | `Why Traders Come to Us` |
+| **Main Heading (H2)** | `Setting up a UAE trading company is more involved than most expect.` |
+| **Introductory Paragraph** | `Exporters and distributors from the UK, India, Turkey and Africa face the same challenges when trying to establish a UAE free zone or mainland trading structure without local guidance.` |
+| **Left Column (Sticky Solution)** | **Sub-heading (H3):** `Core Bridge coordinates the entire UAE trading company setup through one team.`<br>**Body Copy:** `We help you choose the right free zone or mainland route for your trade activities, prepare all required documents and coordinate company formation, corporate bank account facilitation and initial VAT and Corporate Tax registration with a named Dubai-based advisor for WhatsApp and email updates throughout the process.`<br>**CTA Button:** `Get Free Consultation →` |
+| **Right Column (4 Challenge Cards)** | **Card 1:** `Unclear whether a free zone trading license or mainland company is the right structure for their specific products, export markets and trade flow.`<br>**Card 2:** `Corporate bank account documentation requirements in the UAE are complex. Rejected applications are common without prior file preparation and the right introductions.`<br>**Card 3:** `Uncertainty about UAE VAT registration thresholds and Corporate Tax obligations for free zone trading companies and re-export operations.`<br>**Card 4:** `No single Dubai-based point of contact to coordinate company formation, banking and tax registration — most providers handle only one piece of the process.` |
+| **Color Mapping** | **Background:** Off-White/Light Tint (`#F8FAFC` or `#FFFFFF`).<br>**Cards Background:** Pure White (`#FFFFFF`) with subtle border `1px solid #E2E8F0` and soft shadow.<br>**Headings:** Deep Slate (`#0F172A`).<br>**Body Text:** Muted Slate (`#475569`).<br>**Badge:** Soft Blue Tint (`#EFF6FF`) with Primary Blue Text (`#0052FF`).<br>**CTA Button:** Primary Blue (`#0052FF`) with White Text (`#FFFFFF`). |
+| **Layout & Behavior** | **Desktop (>= 1024px):** 2-column grid. Left column has sticky positioning (`position: sticky; top: 100px;`) while user scrolls through the 4 challenge cards on the right.<br>**Mobile (< 768px):** Stacked single column with header, solution text, and cards arranged sequentially. |
+
 ### 3. Audience Selector (Who We Serve)
 | Attribute | Details |
 | :--- | :--- |
