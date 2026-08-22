@@ -4957,6 +4957,203 @@ header.sticky-header.scrolled {
   }
 }
 
+/* Process 4-Step Wave Infographic */
+.process-wave-section {
+  background: #FFFFFF !important;
+  padding: 100px 20px !important;
+  border-top: 1px solid #E2E8F0 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.process-wave-container {
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+}
+
+.process-header {
+  text-align: center !important;
+  max-width: 720px !important;
+  margin: 0 auto 70px auto !important;
+}
+
+.process-pill-badge {
+  display: inline-flex !important;
+  padding: 5px 14px !important;
+  background: #EFF6FF !important;
+  border: 1px solid #DBEAFE !important;
+  border-radius: 9999px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  color: #0052FF !important;
+  margin-bottom: 14px !important;
+}
+
+.process-header h2 {
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  color: #0F172A !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.6px !important;
+  margin: 0 0 12px 0 !important;
+}
+
+.process-header p {
+  font-size: 16px !important;
+  color: #64748B !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+
+/* Wave Track Layout */
+.wave-timeline-wrapper {
+  position: relative !important;
+  min-height: 520px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.wave-svg-line {
+  position: absolute !important;
+  top: 50% !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 280px !important;
+  transform: translateY(-50%) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.wave-steps-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.wave-step-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+}
+
+.wave-step-item.step-top {
+  justify-content: flex-end !important;
+  padding-bottom: 120px !important;
+}
+
+.wave-step-item.step-bottom {
+  justify-content: flex-start !important;
+  padding-top: 120px !important;
+}
+
+/* Floating Icon Node */
+.wave-node-icon {
+  width: 52px !important;
+  height: 52px !important;
+  background: #FFFFFF !important;
+  border: 2px solid #0052FF !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 12px 28px -6px rgba(0, 82, 255, 0.25), 0 0 0 6px rgba(239, 246, 255, 0.8) !important;
+  transition: transform 0.2s ease !important;
+  margin: 12px 0 !important;
+}
+
+.wave-step-item:hover .wave-node-icon {
+  transform: scale(1.1) rotate(4deg) !important;
+}
+
+/* Text Content Card */
+.step-text-block {
+  position: relative !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 16px !important;
+  padding: 22px 20px !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04) !important;
+  text-align: left !important;
+  width: 100% !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.step-text-block:hover {
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08) !important;
+  transform: translateY(-3px) !important;
+}
+
+.ghost-number {
+  position: absolute !important;
+  top: 6px !important;
+  right: 14px !important;
+  font-size: 36px !important;
+  font-weight: 900 !important;
+  color: #F1F5F9 !important;
+  pointer-events: none !important;
+  line-height: 1 !important;
+}
+
+.step-text-block h4 {
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.35 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.step-text-block p {
+  font-size: 13.5px !important;
+  line-height: 1.5 !important;
+  color: #64748B !important;
+  margin: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Mobile & Tablet Vertical Adaptation */
+@media (max-width: 1024px) {
+  .wave-svg-line {
+    display: none !important;
+  }
+  .wave-steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    position: relative !important;
+    padding-left: 20px !important;
+  }
+  .wave-steps-grid::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 45px !important;
+    width: 2px !important;
+    background: #0052FF !important;
+    opacity: 0.3 !important;
+  }
+  .wave-step-item {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    padding: 0 !important;
+  }
+  .wave-node-icon {
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+
 
 
 

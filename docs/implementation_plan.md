@@ -117,13 +117,13 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | **Color Mapping** | **Background:** Pure White (`#FFFFFF`).<br>**Headings:** Near Black (`#0D0D0D`).<br>**Cards:** Background Pure White (`#FFFFFF`), Border `1px solid #EAF1FF`, Hover Border Primary Blue (`#0052FF`).<br>**Service Category Tags:** Background Light Blue Tint (`#EAF1FF`), Text Primary Blue (`#0052FF`). |
 | **Responsive Behavior** | **Desktop:** 3-Column Grid (`repeat(3, 1fr)`).<br>**Mobile:** Swipe carousel with `scroll-snap-type: x mandatory` and `82vw` card widths. |
 
-### 6. How It Works (The Process & Average Timelines)
+### 6. How It Works (The Process 4-Step Sine Wave Infographic)
 | Attribute | Details |
 | :--- | :--- |
-| **Purpose** | Step-by-step onboarding flow and estimated turnaround times. |
-| **Exact HTML Content** | `The Process`<br>`How to set up your UAE trading company in four steps`<br>`One team manages each stage. A clear document checklist and written scope are agreed before any work begins.`<br>Step 1: Book a 15-Minute Advisory Call<br>Step 2: Receive Your Recommended Setup Route and Document Checklist<br>Step 3: We Coordinate Your Company Formation, Bank File and Tax Registration<br>Step 4: Receive Your Full Handover Pack<br><br>**Average Timelines:** Visa (3-5 days), License (5-7 days), Customs (48 hours). |
-| **Color Mapping** | **Background:** Pure White (`#FFFFFF`).<br>**Step Numbers:** Background Deep Navy (`#0A1F44`), Text Pure White (`#FFFFFF`).<br>**Timeline Box:** Background Pure White (`#FFFFFF`), Border `1px solid #EAF1FF`.<br>**SLA Badge:** Background Light Blue Tint (`#EAF1FF`), Text Primary Blue (`#0052FF`).<br>**Timeline Pill:** Background Light Blue Tint (`#EAF1FF`), Text Near Black (`#0D0D0D`). |
-| **Responsive Behavior** | **Desktop:** 3:2 grid split.<br>**Mobile:** Single-column vertical stack, 2-line stacked timeline cards (Icon+Title on top, duration pill below). |
+| **Purpose** | Step-by-step onboarding flow presented as a modern 4-step alternating sine wave roadmap infographic. |
+| **Exact HTML Content** | `THE PROCESS`<br>`How to set up your UAE trading company in four steps`<br>`One team manages each stage. A clear document checklist and written scope are agreed before any work begins.`<br>Step 1: Book a 15-Minute Advisory Call<br>Step 2: Receive Your Recommended Setup Route and Document Checklist<br>Step 3: We Coordinate Your Company Formation, Bank File and Tax Registration<br>Step 4: Receive Your Full Handover Pack |
+| **Color Mapping** | **Background:** Pure White (`#FFFFFF`).<br>**Wave Line:** Primary Blue SVG stroke (`#0052FF`).<br>**Headings:** Dark Navy (`#0F172A`).<br>**Body Copy:** Muted Slate (`#64748B`).<br>**Pill Badge:** Soft Blue Tint (`#EFF6FF`) with Primary Blue Text (`#0052FF`). |
+| **Responsive Behavior** | **Desktop:** 4-Step Alternating Sine Wave Infographic (Top/Bottom nodes with central connecting SVG wave path).<br>**Mobile/Tablet:** Vertical timeline adaptation with connecting line. |
 
 ### 7. Freezone & Port Coverage
 | Attribute | Details |
