@@ -139,7 +139,21 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | **Purpose** | Value propositions and interactive client reviews. |
 | **Exact HTML Content** | `Why CoreBridge`<br>`Why Businesses Choose Us`<br>3 Values: One Point of Contact, Transparent Pricing, Government Liaison Included.<br>3 Quotes: Logistics Co (UK), E-Commerce Trader (India), Import/Export (Oman). |
 | **Color Mapping** | **Background:** Pure White (`#FFFFFF`).<br>**Value Cards:** Background Pure White (`#FFFFFF`), Border `1px solid #EAF1FF`.<br>**Active Testimonial Pill:** Background Primary Blue (`#0052FF`), Text Pure White (`#FFFFFF`).<br>**Inactive Testimonial Avatar:** Background Light Blue Tint (`#EAF1FF`), Text Near Black (`#0D0D0D`). |
-| **Responsive Behavior** | **Desktop:** 2-column split.<br>**Mobile:** Stacked vertical layout, compact testimonial dock with min-height lock. |
+### 5.5. Packages Section (Three Setup Options)
+| Attribute | Details |
+| :--- | :--- |
+| **Purpose** | Present 3 transparent UAE trading company setup tiers (Starter, Growth, Scale) with feature checklists, clear positioning, and supporting advisory disclosure. |
+| **Positioning** | Placed directly BEFORE the FAQ Section. |
+| **Pill Badge** | `PACKAGES` |
+| **Main Heading (H2)** | `Three UAE trading company setup options` |
+| **Subtitle** | `All packages include a written document checklist and named advisor. Exact fees confirmed after your advisory call based on jurisdiction, visa count and government charges.` |
+| **Background Styling** | Off-White canvas (`#FAFAFA`) with subtle dot grid pattern (`radial-gradient(#CBD5E1 1px, transparent 1px)`). |
+| **Package 1 (Starter)** | - **Badge:** `Starter`<br>- **Title:** `Free Zone Trading License`<br>- **Best For:** `Single-entity trading hub for import, export and re-export`<br>- **Price Tag:** `From AED [XXXX]`<br>- **Price Note:** `Exact fees depend on free zone, activities, visa count and government charges.`<br>- **Checklist Features:**<br>  1. Free zone trading license and establishment card<br>  2. Registered UAE business address<br>  3. One visa allocation where included by jurisdiction<br>  4. Initial UAE VAT and Corporate Tax registration support<br>  5. Corporate bank account introduction pack and file preparation<br>- **CTA Button:** `Get Exact Quote on WhatsApp →` (Outline Button) |
+| **Package 2 (Growth - Featured)** | - **Badge:** `Growth` (Popular Highlight)<br>- **Title:** `Mainland Trading Company`<br>- **Best For:** `Businesses needing direct UAE mainland market access`<br>- **Price Tag:** `From AED [XXXX]`<br>- **Price Note:** `Exact fees depend on DED emirate, activities, visa count, bank requirements and government charges.`<br>- **Checklist Features:**<br>  1. Everything in Starter<br>  2. Mainland trading company formation coordination<br>  3. Multi-activity license guidance for import, export and re-export operations<br>  4. Enhanced corporate bank account file support<br>  5. Basic bookkeeping and accounting setup<br>- **CTA Button:** `Discuss My UAE Company Setup →` (Primary Solid Blue Button) |
+| **Package 3 (Scale)** | - **Badge:** `Scale`<br>- **Title:** `UAE Trading Hub and Operations`<br>- **Best For:** `Growing teams with ongoing compliance and operational needs`<br>- **Price Tag:** `From AED [XXXX]`<br>- **Price Note:** `Exact fees confirmed after advisory call based on visa count, services and requirements.`<br>- **Checklist Features:**<br>  1. Everything in Growth<br>  2. Multi-visa processing and PRO support<br>  3. Accounting and Corporate Tax filing services<br>  4. Dedicated account manager and periodic compliance review<br>  5. Trading license renewal, visa renewal and ongoing PRO managed annually<br>- **CTA Button:** `Build My UAE Trading Hub →` (Outline Button) |
+| **Supporting Info Card** | `All packages include a document checklist and written scope before fees are committed. Bank approval is not guaranteed — we prepare a comprehensive, banker-ready application and coordinate introductions where suitable.` |
+| **Color Mapping** | **Cards Background:** Pure White (`#FFFFFF`), Border `1px solid #E2E8F0`, Elevated Shadow on Middle Card.<br>**Accent Blue:** Primary Brand Blue (`#0052FF`).<br>**Check Icons:** Deep Slate (`#0F172A`).<br>**Subtle Text:** Slate Grey (`#64748B`). |
+| **Responsive Behavior** | **Desktop (>= 1024px):** 3-column side-by-side grid with middle card slightly elevated.<br>**Mobile (< 768px):** Single column vertical stack. |
 
 ### 9. FAQ Section
 | Attribute | Details |
