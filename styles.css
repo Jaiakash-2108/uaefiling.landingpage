@@ -5125,30 +5125,69 @@ header.sticky-header.scrolled {
   .wave-svg-line {
     display: none !important;
   }
-  .wave-steps-grid {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-    position: relative !important;
-    padding-left: 20px !important;
+
+  /* 1. Reset huge desktop offsets */
+  .wave-timeline-wrapper {
+    min-height: auto !important;
+    display: block !important;
   }
+
+  .wave-step-item.step-top,
+  .wave-step-item.step-bottom {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  /* 2. Tight gap between consecutive steps */
+  .wave-steps-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important; /* Reduced from huge gap to tight 20px */
+    position: relative !important;
+    padding-left: 0 !important;
+  }
+
+  /* 3. Clean continuous left vertical line */
   .wave-steps-grid::before {
     content: '' !important;
     position: absolute !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    left: 45px !important;
+    top: 24px !important;
+    bottom: 24px !important;
+    left: 23px !important; /* Centers exactly behind the 48px icon */
     width: 2px !important;
     background: #0052FF !important;
-    opacity: 0.3 !important;
+    opacity: 0.35 !important;
+    z-index: 1 !important;
   }
+
+  /* 4. Horizontal alignment of Icon + Card */
   .wave-step-item {
+    display: flex !important;
     flex-direction: row !important;
     align-items: flex-start !important;
-    gap: 20px !important;
-    padding: 0 !important;
+    gap: 16px !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
+
+  /* 5. Compact Icon Node */
   .wave-node-icon {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
     flex-shrink: 0 !important;
+    margin: 0 !important;
+    background: #FFFFFF !important;
+    border: 2px solid #0052FF !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 82, 255, 0.15) !important;
+  }
+
+  /* 6. Card content padding */
+  .step-text-block {
+    flex: 1 !important;
+    padding: 16px 18px !important;
     margin: 0 !important;
   }
 }
