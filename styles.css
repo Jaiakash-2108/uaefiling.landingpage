@@ -5891,6 +5891,66 @@ hr,
   }
 }
 
+/* Section 2.5 Mobile Typography Scaling (< 768px) */
+@media (max-width: 768px) {
+  
+  /* Section Container Padding */
+  .traders-section,
+  #why-traders-come-to-us {
+    padding: 48px 18px !important;
+  }
+
+  /* Slim Compact Pill Badge */
+  .traders-pill-badge,
+  #why-traders-come-to-us .traders-pill-badge {
+    font-size: 10px !important;
+    padding: 4px 11px !important;
+    letter-spacing: 0.6px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Main Heading (H2) - Reduced from giant font to clean readable size */
+  .traders-main-title,
+  #why-traders-come-to-us h2 {
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.4px !important;
+    margin-bottom: 12px !important;
+    text-wrap: balance !important;
+  }
+
+  /* Introductory Paragraph */
+  .traders-intro-desc,
+  #why-traders-come-to-us p.traders-intro-desc {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    color: #64748B !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Solution Box Inner Typography */
+  .traders-solution-box {
+    padding: 18px !important;
+    border-radius: 12px !important;
+  }
+
+  .solution-heading,
+  .traders-solution-box h3 {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .solution-desc,
+  .traders-solution-box p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: #475569 !important;
+  }
+}
+
 
 
 
