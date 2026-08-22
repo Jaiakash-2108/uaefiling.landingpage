@@ -5685,6 +5685,66 @@ hr,
   margin: 0 !important;
 }
 
+/* Packages Section Background Reset */
+.packages-section,
+#packages {
+  background-color: #FFFFFF !important; /* Matches pure white brand background */
+  background-image: none !important;    /* Completely removes dot grid pattern */
+  border: none !important;
+}
+
+/* Global consistent vertical padding */
+.hero-section,
+.traders-section,
+#why-traders-come-to-us,
+.who-we-serve-section,
+.process-wave-section,
+#process,
+.packages-section,
+#packages,
+.faq-section,
+#faq {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Tablet vertical spacing */
+@media (max-width: 1024px) {
+  .hero-section,
+  .traders-section,
+  #why-traders-come-to-us,
+  .who-we-serve-section,
+  .process-wave-section,
+  #process,
+  .packages-section,
+  #packages,
+  .faq-section,
+  #faq {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+}
+
+/* Mobile vertical spacing */
+@media (max-width: 768px) {
+  .hero-section,
+  .traders-section,
+  #why-traders-come-to-us,
+  .who-we-serve-section,
+  .process-wave-section,
+  #process,
+  .packages-section,
+  #packages,
+  .faq-section,
+  #faq {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+}
+
 
 
 
