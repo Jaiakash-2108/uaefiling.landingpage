@@ -6274,6 +6274,66 @@ hr,
   }
 }
 
+@media (max-width: 768px) {
+  
+  /* Push entire hero content downwards away from top navbar */
+  .hero-section,
+  #hero {
+    padding-top: 135px !important; /* Increased downward offset */
+    padding-bottom: 50px !important;
+  }
+
+  .hero-container {
+    margin-top: 28px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-pill-badge {
+    margin-bottom: 16px !important;
+  }
+
+  /* Force Exact 2-Line Heading Structure */
+  .hero-title,
+  .hero-section h1,
+  #hero h1 {
+    font-size: 17.5px !important; /* Scaled down so line 1 fits easily on 1 line */
+    font-weight: 800 !important;
+    line-height: 1.35 !important;
+    letter-spacing: -0.3px !important;
+    margin: 0 auto 14px auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .hero-title .hero-line-1 {
+    display: block !important;
+    white-space: nowrap !important; /* Prevents breaking into line 2 & 3 */
+    font-size: 17.5px !important;
+  }
+
+  .hero-title .hero-line-2 {
+    display: block !important;
+    white-space: nowrap !important;
+    font-size: 17.5px !important;
+    margin-top: 2px !important;
+  }
+
+  /* Balanced Subtitle */
+  .hero-subtitle,
+  .hero-section p,
+  #hero p {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    max-width: 290px !important;
+    margin: 0 auto 20px auto !important;
+    color: #334155 !important;
+    font-weight: 500 !important;
+  }
+}
+
 
 
 
