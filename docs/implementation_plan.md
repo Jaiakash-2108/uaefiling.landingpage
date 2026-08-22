@@ -171,13 +171,16 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | **Color Mapping** | **Outer Container:** Deep Navy (`#0A1F44`) with `24px` border radius.<br>**Left Headings:** Pure White (`#FFFFFF`).<br>**Left Subtext / Meta:** Light Blue Subtext (`#A9C2FF`).<br>**White Form Card:** Pure White (`#FFFFFF`) with `18px–20px` border radius.<br>**Inputs / Selects / Textarea:** Background Pure White (`#FFFFFF`), Border `1px solid #EAF1FF`, Focus Ring Accent Blue (`#3D8BFF`), Text Near Black (`#0D0D0D`).<br>**Submit Button:** Background Primary Blue (`#0052FF`), Text Pure White (`#FFFFFF`), Hover Accent Blue (`#3D8BFF`).<br>**Privacy Disclaimer Text:** Centered Muted Body Text (`#444444`). |
 | **Responsive Behavior** | **Desktop:** 4:6 grid split.<br>**Mobile:** Single-column container, 2-column form grid (`1fr 1fr`), full-span fields for Service/Message/Submit, compact 40px inputs. |
 
-### 11. Footer
+### 11. Footer (Multi-Column & Watermark Layout)
 | Attribute | Details |
 | :--- | :--- |
-| **Purpose** | Secondary navigation, compliance links, and copyright info. |
-| **Exact HTML Content** | Brand logo, corporate statement, Services links, Company links, Copyright 2026. |
-| **Color Mapping** | **Background:** Deep Navy (`#0A1F44`).<br>**Headings:** Pure White (`#FFFFFF`).<br>**Links:** Light Blue Subtext (`#A9C2FF`), Hover Pure White (`#FFFFFF`).<br>**Copyright Text:** Light Blue Subtext (`#A9C2FF`) with `0.7` opacity. |
-| **Responsive Behavior** | **Desktop:** 4-column layout.<br>**Mobile:** Centered vertical stack. |
+| **Purpose** | Comprehensive footer with brand information, trust badges, 3-column navigation grid, large subtle watermark text, and copyright bar. |
+| **Layout** | 4-column responsive grid (Brand column with Trust Badges + 3 Link Columns) followed by a subtle large watermark graphic text and copyright bar. |
+| **Brand Info** | Logo + "Expert UAE Company Setup, Banking Facilitation, and Compliance support for international exporters and distributors. Operated by Corebridge Corporate Solutions, Dubai, UAE." + DED Registered & FTA Compliant Trust Badges. |
+| **Link Columns** | **Services:** Free Zone Setup, Mainland Company, Bank File Facilitation, VAT & Tax Registration, Customs Clearance.<br>**Company:** How It Works, Why Traders Choose Us, Setup Packages, Frequently Asked Questions, Contact Dubai Office.<br>**Legal & Compliance:** Privacy Policy, Terms of Service, Compliance Disclaimer, Document Checklist. |
+| **Bottom Accent** | Subtle oversized watermark text (`COREBRIDGE`) with low opacity (`-webkit-text-stroke: 1px rgba(255, 255, 255, 0.06)`). |
+| **Color Mapping** | **Background:** Approved Deep Navy (`#061124`).<br>**Headings:** Pure White (`#FFFFFF`).<br>**Links:** Slate Muted (`#94A3B8`), Hover Accent Blue (`#3D8BFF`).<br>**Copyright & Operated By:** Muted Slate (`#64748B`).<br>**Trust Badges:** Subtle White Tint (`rgba(255, 255, 255, 0.05)`) with Light Slate Text (`#CBD5E1`). |
+| **Responsive Behavior** | **Desktop (>= 1024px):** 4-column grid layout (1.3fr brand column + 3 link columns).<br>**Mobile (< 768px):** Stacked vertical columns with responsive watermark scale. |
 
 ---
 
