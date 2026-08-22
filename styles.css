@@ -6609,6 +6609,76 @@ p,
   }
 }
 
+/* Standardized Mobile 5 Section Headers (< 768px) */
+@media (max-width: 768px) {
+
+  /* 1. Header Wrapper & Unified Boundary Container */
+  .section-header,
+  .why-choose-header,
+  .coverage-header,
+  .services-header,
+  .who-we-serve-header,
+  .packages-header,
+  .process-header,
+  .faq-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    max-width: 310px !important; /* Enforces strict global width box */
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 28px !important;
+    padding: 0 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Main Title (H2) */
+  .section-header h2,
+  .coverage-title,
+  .packages-title,
+  .who-we-serve-title,
+  .process-header h2,
+  .faq-header h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.35px !important;
+    color: #0A192F !important;
+    margin: 0 0 10px 0 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .section-header h2 .line-block {
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  /* 3. Subtitle Strictly Inset Underneath Heading */
+  .section-header p,
+  .section-header .section-desc,
+  .coverage-desc,
+  .process-header p,
+  .packages-header p,
+  .faq-header p {
+    width: 100% !important;
+    max-width: 90% !important; /* Locks subtitle narrower than the heading */
+    font-size: 13px !important;
+    line-height: 1.48 !important;
+    color: #64748B !important;
+    font-weight: 400 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    text-wrap: balance !important;
+    box-sizing: border-box !important;
+  }
+}
+
 
 
 
