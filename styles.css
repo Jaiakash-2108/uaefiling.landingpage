@@ -6108,6 +6108,73 @@ hr,
   }
 }
 
+/* ==========================================
+   HERO TYPOGRAPHY & RESPONSIVE ALIGNMENT
+   ========================================== */
+
+/* Desktop Base */
+.hero-title {
+  font-size: 52px !important;
+  font-weight: 800 !important;
+  color: #0F172A !important;
+  line-height: 1.18 !important;
+  letter-spacing: -1px !important;
+  max-width: 860px !important;
+  margin: 0 auto 18px auto !important;
+  text-align: center !important;
+}
+
+.hero-subtitle {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  color: #334155 !important;
+  font-weight: 500 !important;
+  max-width: 740px !important;
+  margin: 0 auto 28px auto !important;
+  text-align: center !important;
+}
+
+.desktop-break {
+  display: inline !important;
+}
+
+/* Tablet Scaling (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 40px !important;
+    max-width: 680px !important;
+  }
+  .hero-subtitle {
+    font-size: 16px !important;
+    max-width: 580px !important;
+  }
+}
+
+/* Mobile Scaling (<= 768px) */
+@media (max-width: 768px) {
+  .desktop-break {
+    display: none !important;
+  }
+
+  .hero-title {
+    font-size: 26px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.4px !important;
+    max-width: 320px !important;
+    margin: 0 auto 12px auto !important;
+    text-wrap: balance !important;
+  }
+
+  .hero-subtitle {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #475569 !important;
+    max-width: 310px !important;
+    margin: 0 auto 22px auto !important;
+    text-wrap: balance !important;
+  }
+}
+
 
 
 
