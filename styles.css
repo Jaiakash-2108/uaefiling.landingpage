@@ -6465,6 +6465,150 @@ p,
   }
 }
 
+/* Mobile Footer Layout & Centering Alignment (< 768px) */
+@media (max-width: 768px) {
+
+  /* 1. Footer Global Container Mobile Alignment */
+  .site-footer,
+  #footer {
+    text-align: center !important;
+    padding: 48px 16px 28px 16px !important;
+  }
+
+  .footer-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .footer-top-grid,
+  .footer-top-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+    width: 100% !important;
+    margin-bottom: 36px !important;
+  }
+
+  /* 2. Brand Column & Trust Badges Center Alignment */
+  .footer-brand-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-logo {
+    justify-content: center !important;
+    margin: 0 auto 10px auto !important;
+  }
+
+  .footer-bio,
+  .footer-brand-desc {
+    text-align: center !important;
+    margin: 0 auto 14px auto !important;
+    max-width: 320px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  .footer-trust-badges {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .trust-badge-item,
+  .trust-badge-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+
+  /* 3. Navigation Columns & Links Centering */
+  .footer-nav-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .footer-heading {
+    text-align: center !important;
+    font-size: 13.5px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.6px !important;
+  }
+
+  .footer-links,
+  .footer-nav-col ul {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+    gap: 10px !important;
+  }
+
+  .footer-links li a,
+  .footer-nav-col a {
+    font-size: 13px !important;
+    text-align: center !important;
+    display: inline-block !important;
+  }
+
+  /* 4. Giant Watermark Scaling */
+  .footer-watermark-wrapper {
+    padding: 20px 0 10px 0 !important;
+  }
+
+  .footer-giant-watermark,
+  .footer-watermark-text {
+    font-size: clamp(36px, 10vw, 64px) !important;
+  }
+
+  /* 5. Bottom Copyright & Legal Links (Single Horizontal Row) */
+  .footer-bottom-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    padding-top: 18px !important;
+    width: 100% !important;
+  }
+
+  .copyright-text {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-bottom-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+  }
+}
+
 
 
 
