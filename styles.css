@@ -6175,6 +6175,54 @@ hr,
   }
 }
 
+/* Hero Container Vertical Centering Adjustment */
+.hero-section,
+#hero {
+  padding-top: 150px !important; /* Pushes content down away from header */
+  padding-bottom: 90px !important;
+  min-height: 85vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+.hero-container {
+  margin-top: 24px !important; /* Additional downward nudge for all elements */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.hero-pill-badge,
+.hero-section .pill-badge {
+  margin-bottom: 22px !important;
+}
+
+/* Tablet Downward Adjustment */
+@media (max-width: 1024px) {
+  .hero-section,
+  #hero {
+    padding-top: 120px !important;
+    padding-bottom: 60px !important;
+    min-height: auto !important;
+  }
+}
+
+/* Mobile Downward Adjustment */
+@media (max-width: 768px) {
+  .hero-section,
+  #hero {
+    padding-top: 90px !important;
+    padding-bottom: 40px !important;
+  }
+  .hero-container {
+    margin-top: 12px !important;
+  }
+}
+
 
 
 
