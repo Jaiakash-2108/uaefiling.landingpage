@@ -139,7 +139,7 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | **Purpose** | Value propositions and interactive client reviews. |
 | **Exact HTML Content** | `Why CoreBridge`<br>`Why Businesses Choose Us`<br>3 Values: One Point of Contact, Transparent Pricing, Government Liaison Included.<br>3 Quotes: Logistics Co (UK), E-Commerce Trader (India), Import/Export (Oman). |
 | **Color Mapping** | **Background:** Pure White (`#FFFFFF`).<br>**Value Cards:** Background Pure White (`#FFFFFF`), Border `1px solid #EAF1FF`.<br>**Active Testimonial Pill:** Background Primary Blue (`#0052FF`), Text Pure White (`#FFFFFF`).<br>**Inactive Testimonial Avatar:** Background Light Blue Tint (`#EAF1FF`), Text Near Black (`#0D0D0D`). |
-### 5.5. Packages Section (Three Setup Options)
+### 8.5. Packages Section (Three Setup Options)
 | Attribute | Details |
 | :--- | :--- |
 | **Purpose** | Present 3 transparent UAE trading company setup tiers (Starter, Growth, Scale) with feature checklists, clear positioning, and supporting advisory disclosure. |
