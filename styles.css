@@ -7274,3 +7274,118 @@ p,
     overflow-x: hidden !important;
   }
 }
+
+/* =============================================================
+   CONTACT SECTION — RESTORE ORIGINAL WHITE-ON-NAVY STYLING
+   Overrides any global mobile overrides that broke this section.
+   ============================================================= */
+.contact-section,
+#contact {
+  text-align: left !important;
+}
+
+.contact-section h2,
+.contact-section .section-title,
+#contact h2,
+#contact .section-title {
+  color: #FFFFFF !important;
+  text-align: left !important;
+  max-width: 100% !important;
+  letter-spacing: -0.4px !important;
+}
+
+.contact-section p,
+.contact-section .section-subtitle,
+.contact-section .text-white-opacity,
+#contact p,
+#contact .section-subtitle,
+#contact .text-white-opacity {
+  color: #94A3B8 !important;
+  text-align: left !important;
+  max-width: 100% !important;
+}
+
+.contact-section .section-eyebrow,
+#contact .section-eyebrow {
+  color: #7DD3FC !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.contact-info,
+.contact-meta,
+.contact-info-list,
+.contact-details {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+.meta-item {
+  text-align: left !important;
+  color: #94A3B8 !important;
+}
+
+@media (max-width: 768px) {
+  .contact-section,
+  #contact {
+    text-align: left !important;
+    padding: 48px 18px !important;
+  }
+
+  .contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .contact-info {
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .contact-section h2,
+  .contact-section .section-title,
+  #contact h2,
+  #contact .section-title {
+    color: #FFFFFF !important;
+    text-align: left !important;
+    max-width: 100% !important;
+    font-size: 22px !important;
+    line-height: 1.28 !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  .contact-section p,
+  .contact-section .section-subtitle,
+  #contact p,
+  #contact .section-subtitle {
+    color: #94A3B8 !important;
+    text-align: left !important;
+    max-width: 100% !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .contact-section .section-eyebrow,
+  #contact .section-eyebrow {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    margin-bottom: 12px !important;
+  }
+
+  .contact-meta {
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .meta-item {
+    text-align: left !important;
+    color: #94A3B8 !important;
+    font-size: 13px !important;
+  }
+}
