@@ -6679,6 +6679,58 @@ p,
   }
 }
 
+/* Footer Bottom Bar Mobile Center Alignment (< 768px) */
+@media (max-width: 768px) {
+  
+  /* Footer Bottom Bar Wrapper */
+  .footer-bottom-bar,
+  .footer-bottom,
+  .site-footer .bottom-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-top: 16px !important;
+  }
+
+  /* Copyright Text Centering */
+  .copyright-text,
+  .footer-bottom-bar p,
+  .site-footer .bottom-bar p {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto 10px auto !important;
+  }
+
+  /* Legal Links Row Centering */
+  .footer-bottom-links,
+  .legal-links,
+  .footer-legal-links,
+  .site-footer .bottom-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    gap: 8px !important;
+    text-align: center !important;
+    list-style: none !important;
+  }
+
+  .footer-bottom-links a,
+  .legal-links a,
+  .footer-legal-links a {
+    display: inline-block !important;
+    text-align: center !important;
+  }
+}
+
 
 
 
