@@ -6354,6 +6354,53 @@ hr,
   }
 }
 
+/* Coverage Section Mobile Line Control (< 768px) */
+@media (max-width: 768px) {
+  
+  /* Heading Exact Line Control */
+  .coverage-title {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    line-height: 1.35 !important;
+    letter-spacing: -0.3px !important;
+    text-align: center !important;
+    margin: 0 auto 10px auto !important;
+  }
+
+  .coverage-title .cov-line-1 {
+    display: block !important;
+    white-space: nowrap !important;
+    font-size: 20px !important;
+  }
+
+  .coverage-title .cov-line-2 {
+    display: block !important;
+    white-space: nowrap !important;
+    font-size: 20px !important;
+    margin-top: 2px !important;
+  }
+
+  /* Subtitle Exact Line Control */
+  .coverage-desc {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    color: #64748B !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .coverage-desc .cov-desc-1 {
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  .coverage-desc .cov-desc-2 {
+    display: block !important;
+    white-space: nowrap !important;
+    margin-top: 2px !important;
+  }
+}
+
 
 
 
