@@ -176,7 +176,7 @@ To ensure a high-end, premium corporate compliance aesthetic (avoiding generic a
 | :--- | :--- |
 | **Purpose** | Comprehensive footer with brand information, trust badges, 3-column navigation grid, large subtle watermark text, and copyright bar. |
 | **Layout** | 4-column responsive grid (Brand column with Trust Badges + 3 Link Columns) followed by a subtle large watermark graphic text and copyright bar. |
-| **Brand Info** | Logo + "Expert UAE Company Setup, Banking Facilitation, and Compliance support for international exporters and distributors. Operated by Corebridge Corporate Solutions, Dubai, UAE." + DED Registered & FTA Compliant Trust Badges. |
+| **Brand Info** | Logo + "Expert UAE Company Setup, Banking Facilitation, and Compliance support for international exporters and distributors. Operated by Corebridge Corporate Services, Dubai, UAE." + DED Registered & FTA Compliant Trust Badges. |
 | **Link Columns** | **Services:** Free Zone Setup, Mainland Company, Bank File Facilitation, VAT & Tax Registration, Customs Clearance.<br>**Company:** How It Works, Why Traders Choose Us, Setup Packages, Frequently Asked Questions, Contact Dubai Office.<br>**Legal & Compliance:** Privacy Policy, Terms of Service, Compliance Disclaimer, Document Checklist. |
 | **Bottom Accent** | Subtle oversized watermark text (`COREBRIDGE`) with low opacity (`-webkit-text-stroke: 1px rgba(255, 255, 255, 0.06)`). |
 | **Color Mapping** | **Background:** Approved Deep Navy (`#061124`).<br>**Headings:** Pure White (`#FFFFFF`).<br>**Links:** Slate Muted (`#94A3B8`), Hover Accent Blue (`#3D8BFF`).<br>**Copyright & Operated By:** Muted Slate (`#64748B`).<br>**Trust Badges:** Subtle White Tint (`rgba(255, 255, 255, 0.05)`) with Light Slate Text (`#CBD5E1`). |
