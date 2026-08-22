@@ -5822,6 +5822,75 @@ hr,
   background: #0040CC !important;
 }
 
+/* Mobile Hero Section Typography Optimizations (< 768px) */
+@media (max-width: 768px) {
+  
+  /* 1. Hero Section Container & Padding */
+  .hero-section,
+  #hero {
+    padding-top: 50px !important;
+    padding-bottom: 40px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    text-align: center !important;
+  }
+
+  /* 2. Compact Slim Pill Badge */
+  .hero-section .pill-badge,
+  .hero-section .hero-pill-badge,
+  #hero .pill-badge,
+  .hero-section .section-eyebrow,
+  #hero .section-eyebrow {
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: max-content !important;
+    padding: 4px 12px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.6px !important;
+    margin-bottom: 16px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+
+  /* 3. Hero Main Title (H1) - Formats into clean 3 lines */
+  .hero-section h1,
+  .hero-title,
+  #hero h1 {
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.4px !important;
+    max-width: 320px !important;
+    margin: 0 auto 14px auto !important;
+    text-wrap: balance !important;
+  }
+
+  /* 4. Hero Subtitle - Formats into clean 2 to 3 lines */
+  .hero-section p,
+  .hero-subtitle,
+  #hero p {
+    font-size: 13.5px !important;
+    line-height: 1.45 !important;
+    color: #334155 !important;
+    font-weight: 500 !important;
+    max-width: 310px !important;
+    margin: 0 auto 22px auto !important;
+    text-wrap: balance !important;
+  }
+
+  /* 5. Hero CTA Button Mobile Fit */
+  .hero-section .btn-primary,
+  .hero-section .hero-btn,
+  #hero a.btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    font-size: 14.5px !important;
+    padding: 12px 20px !important;
+    margin: 0 auto !important;
+  }
+}
+
 
 
 
