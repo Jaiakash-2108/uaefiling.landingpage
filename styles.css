@@ -5476,14 +5476,18 @@ header.sticky-header.scrolled {
 .footer-logo {
   display: flex !important;
   align-items: center !important;
+  margin-bottom: 12px !important;
 }
 
-.footer-brand-logo {
-  height: 32px !important;
+.footer-brand-logo,
+.footer-logo img,
+.footer-logo svg {
+  height: 42px !important;
   width: auto !important;
+  max-height: 48px !important;
   display: block !important;
   object-fit: contain !important;
-  margin-bottom: 6px !important;
+  margin-bottom: 8px !important;
 }
 
 .footer-brand-desc {
