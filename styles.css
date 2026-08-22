@@ -5745,6 +5745,83 @@ hr,
   }
 }
 
+/* Mobile Drawer Background */
+.mobile-menu,
+.mobile-nav-drawer,
+#mobile-menu,
+.mobile-nav-overlay {
+  background-color: #0A192F !important; /* Deep Navy Theme */
+  color: #FFFFFF !important;
+}
+
+/* Make Mobile Drawer Logo 100% Crisp White */
+.mobile-nav-logo,
+.mobile-menu .logo img,
+.mobile-menu-header img,
+.mobile-logo-img {
+  height: 36px !important;
+  width: auto !important;
+  filter: brightness(0) invert(1) !important; /* Converts black/dark logo to pure white */
+  display: block !important;
+}
+
+/* Close Button Style */
+.mobile-close-btn,
+.mobile-menu-close {
+  color: #FFFFFF !important;
+  font-size: 32px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  opacity: 0.9 !important;
+}
+
+/* Mobile Nav Links Hierarchy */
+.mobile-nav-links {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 22px !important;
+  padding: 40px 20px !important;
+}
+
+.mobile-link {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+  letter-spacing: -0.2px !important;
+}
+
+.mobile-link:hover,
+.mobile-link:active {
+  color: #38BDF8 !important; /* Accent soft cyan/blue */
+}
+
+/* CTA Button inside mobile drawer */
+.mobile-cta-btn {
+  margin-top: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 280px !important;
+  background: #0052FF !important;
+  color: #FFFFFF !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 14px 24px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.mobile-cta-btn:hover {
+  background: #0040CC !important;
+}
+
 
 
 

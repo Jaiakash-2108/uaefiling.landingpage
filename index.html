@@ -49,22 +49,21 @@
     </nav>
 
     <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobile-nav">
+    <div class="mobile-nav-overlay mobile-menu" id="mobile-nav">
         <div class="mobile-menu-header">
-            <a href="#" class="logo-link">
-                <img src="assest/cb logo.png" alt="CoreBridge Logo" class="logo-img mobile-logo-img">
-            </a>
-            <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+            <div class="mobile-logo-wrap">
+                <img src="assest/cb logo.png" alt="Core Bridge Logo" class="mobile-nav-logo" onerror="this.onerror=null; this.src='assest/cb logo.png';">
+            </div>
+            <button class="mobile-close-btn mobile-menu-close" id="mobile-menu-close" aria-label="Close Menu">&times;</button>
         </div>
-        <div class="mobile-nav-content">
-            <a href="#services" class="mobile-nav-link">Services</a>
-            <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
-            <a href="#freezone-coverage" class="mobile-nav-link">Freezones</a>
-            <a href="#faq" class="mobile-nav-link">FAQ</a>
-            <a href="#contact" class="btn btn-primary btn-block"
-                style="background-color: #0052FF !important; color: #FFFFFF !important; border: none !important;">Get In
-                Touch</a>
-        </div>
+        <nav class="mobile-nav-links mobile-nav-content">
+            <a href="#why-traders-come-to-us" class="mobile-link mobile-nav-link">Why Us</a>
+            <a href="#who-we-serve" class="mobile-link mobile-nav-link">Who We Serve</a>
+            <a href="#process" class="mobile-link mobile-nav-link">The Process</a>
+            <a href="#packages" class="mobile-link mobile-nav-link">Packages</a>
+            <a href="#faq" class="mobile-link mobile-nav-link">FAQ</a>
+            <a href="#contact" class="mobile-cta-btn mobile-nav-link">Get In Touch &rarr;</a>
+        </nav>
     </div>
 
     <!-- 2. Hero Section -->
