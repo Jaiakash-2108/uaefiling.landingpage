@@ -5655,6 +5655,36 @@ header.sticky-header.scrolled {
   }
 }
 
+/* Global Reset for Section Divider Lines */
+section,
+.hero-section,
+.traders-section,
+#why-traders-come-to-us,
+.who-we-serve-section,
+.process-wave-section,
+#process,
+.packages-section,
+#packages,
+.faq-section,
+#faq,
+.site-footer,
+#footer {
+  border-top: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+}
+
+/* Remove any standalone horizontal rules / separator lines */
+hr,
+.section-divider,
+.divider-line,
+.separator {
+  display: none !important;
+  border: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+}
+
 
 
 
